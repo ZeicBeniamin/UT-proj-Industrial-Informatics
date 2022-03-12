@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Industrial_Informatics_Project.Scripts.Games
 {
-    class Game
+    public class Game
     {
         // The class can be changed if more attributes are needed or other methods
 

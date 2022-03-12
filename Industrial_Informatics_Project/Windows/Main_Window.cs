@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTest;
+using Industrial_Informatics_Project.Windows;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,11 @@ namespace Industrial_Informatics_Project
         public Main_Window()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ChimpanzeeTest controller = new ChimpanzeeTest(0);
         }
     }
 }
