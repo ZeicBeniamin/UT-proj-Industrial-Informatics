@@ -71,6 +71,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_0.Name = "button_0";
             this.button_0.Size = new System.Drawing.Size(50, 50);
             this.button_0.TabIndex = 0;
+            this.button_0.TabStop = false;
             this.button_0.Text = "dgsgf";
             this.button_0.UseVisualStyleBackColor = false;
             this.button_0.Click += new System.EventHandler(this.button_Click);
@@ -82,6 +83,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_1.Name = "button_1";
             this.button_1.Size = new System.Drawing.Size(50, 50);
             this.button_1.TabIndex = 1;
+            this.button_1.TabStop = false;
             this.button_1.UseVisualStyleBackColor = false;
             this.button_1.Click += new System.EventHandler(this.button_Click);
             // 
@@ -92,6 +94,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_2.Name = "button_2";
             this.button_2.Size = new System.Drawing.Size(50, 50);
             this.button_2.TabIndex = 2;
+            this.button_2.TabStop = false;
             this.button_2.UseVisualStyleBackColor = false;
             this.button_2.Click += new System.EventHandler(this.button_Click);
             // 
@@ -102,6 +105,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_3.Name = "button_3";
             this.button_3.Size = new System.Drawing.Size(50, 50);
             this.button_3.TabIndex = 3;
+            this.button_3.TabStop = false;
             this.button_3.UseVisualStyleBackColor = false;
             this.button_3.Click += new System.EventHandler(this.button_Click);
             // 
@@ -112,6 +116,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_4.Name = "button_4";
             this.button_4.Size = new System.Drawing.Size(50, 50);
             this.button_4.TabIndex = 4;
+            this.button_4.TabStop = false;
             this.button_4.UseVisualStyleBackColor = false;
             this.button_4.Click += new System.EventHandler(this.button_Click);
             // 
@@ -122,6 +127,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_5.Name = "button_5";
             this.button_5.Size = new System.Drawing.Size(50, 50);
             this.button_5.TabIndex = 5;
+            this.button_5.TabStop = false;
             this.button_5.UseVisualStyleBackColor = false;
             this.button_5.Click += new System.EventHandler(this.button_Click);
             // 
@@ -132,6 +138,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_6.Name = "button_6";
             this.button_6.Size = new System.Drawing.Size(50, 50);
             this.button_6.TabIndex = 6;
+            this.button_6.TabStop = false;
             this.button_6.UseVisualStyleBackColor = false;
             this.button_6.Click += new System.EventHandler(this.button_Click);
             // 
@@ -142,6 +149,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_7.Name = "button_7";
             this.button_7.Size = new System.Drawing.Size(50, 50);
             this.button_7.TabIndex = 7;
+            this.button_7.TabStop = false;
             this.button_7.UseVisualStyleBackColor = false;
             this.button_7.Click += new System.EventHandler(this.button_Click);
             // 
@@ -152,6 +160,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_8.Name = "button_8";
             this.button_8.Size = new System.Drawing.Size(50, 50);
             this.button_8.TabIndex = 8;
+            this.button_8.TabStop = false;
             this.button_8.UseVisualStyleBackColor = false;
             this.button_8.Click += new System.EventHandler(this.button_Click);
             // 
@@ -162,6 +171,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_9.Name = "button_9";
             this.button_9.Size = new System.Drawing.Size(50, 50);
             this.button_9.TabIndex = 9;
+            this.button_9.TabStop = false;
             this.button_9.UseVisualStyleBackColor = false;
             this.button_9.Click += new System.EventHandler(this.button_Click);
             // 
@@ -172,6 +182,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_10.Name = "button_10";
             this.button_10.Size = new System.Drawing.Size(50, 50);
             this.button_10.TabIndex = 10;
+            this.button_10.TabStop = false;
             this.button_10.UseVisualStyleBackColor = false;
             this.button_10.Click += new System.EventHandler(this.button_Click);
             // 
@@ -182,6 +193,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_11.Name = "button_11";
             this.button_11.Size = new System.Drawing.Size(50, 50);
             this.button_11.TabIndex = 11;
+            this.button_11.TabStop = false;
             this.button_11.UseVisualStyleBackColor = false;
             this.button_11.Click += new System.EventHandler(this.button_Click);
             // 
@@ -192,6 +204,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_12.Name = "button_12";
             this.button_12.Size = new System.Drawing.Size(50, 50);
             this.button_12.TabIndex = 12;
+            this.button_12.TabStop = false;
             this.button_12.UseVisualStyleBackColor = false;
             this.button_12.Click += new System.EventHandler(this.button_Click);
             // 
@@ -202,6 +215,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_13.Name = "button_13";
             this.button_13.Size = new System.Drawing.Size(50, 50);
             this.button_13.TabIndex = 13;
+            this.button_13.TabStop = false;
             this.button_13.UseVisualStyleBackColor = false;
             this.button_13.Click += new System.EventHandler(this.button_Click);
             // 
@@ -212,6 +226,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_14.Name = "button_14";
             this.button_14.Size = new System.Drawing.Size(50, 50);
             this.button_14.TabIndex = 14;
+            this.button_14.TabStop = false;
             this.button_14.UseVisualStyleBackColor = false;
             this.button_14.Click += new System.EventHandler(this.button_Click);
             // 
@@ -222,6 +237,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_15.Name = "button_15";
             this.button_15.Size = new System.Drawing.Size(50, 50);
             this.button_15.TabIndex = 15;
+            this.button_15.TabStop = false;
             this.button_15.UseVisualStyleBackColor = false;
             this.button_15.Click += new System.EventHandler(this.button_Click);
             // 
@@ -232,6 +248,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_16.Name = "button_16";
             this.button_16.Size = new System.Drawing.Size(50, 50);
             this.button_16.TabIndex = 16;
+            this.button_16.TabStop = false;
             this.button_16.UseVisualStyleBackColor = false;
             this.button_16.Click += new System.EventHandler(this.button_Click);
             // 
@@ -242,6 +259,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_17.Name = "button_17";
             this.button_17.Size = new System.Drawing.Size(50, 50);
             this.button_17.TabIndex = 17;
+            this.button_17.TabStop = false;
             this.button_17.UseVisualStyleBackColor = false;
             this.button_17.Click += new System.EventHandler(this.button_Click);
             // 
@@ -252,6 +270,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_18.Name = "button_18";
             this.button_18.Size = new System.Drawing.Size(50, 50);
             this.button_18.TabIndex = 18;
+            this.button_18.TabStop = false;
             this.button_18.UseVisualStyleBackColor = false;
             this.button_18.Click += new System.EventHandler(this.button_Click);
             // 
@@ -262,6 +281,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_19.Name = "button_19";
             this.button_19.Size = new System.Drawing.Size(50, 50);
             this.button_19.TabIndex = 19;
+            this.button_19.TabStop = false;
             this.button_19.UseVisualStyleBackColor = false;
             this.button_19.Click += new System.EventHandler(this.button_Click);
             // 
@@ -272,6 +292,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_20.Name = "button_20";
             this.button_20.Size = new System.Drawing.Size(50, 50);
             this.button_20.TabIndex = 20;
+            this.button_20.TabStop = false;
             this.button_20.UseVisualStyleBackColor = false;
             this.button_20.Click += new System.EventHandler(this.button_Click);
             // 
@@ -282,6 +303,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_21.Name = "button_21";
             this.button_21.Size = new System.Drawing.Size(50, 50);
             this.button_21.TabIndex = 21;
+            this.button_21.TabStop = false;
             this.button_21.UseVisualStyleBackColor = false;
             this.button_21.Click += new System.EventHandler(this.button_Click);
             // 
@@ -292,6 +314,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_22.Name = "button_22";
             this.button_22.Size = new System.Drawing.Size(50, 50);
             this.button_22.TabIndex = 22;
+            this.button_22.TabStop = false;
             this.button_22.UseVisualStyleBackColor = false;
             this.button_22.Click += new System.EventHandler(this.button_Click);
             // 
@@ -302,6 +325,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_23.Name = "button_23";
             this.button_23.Size = new System.Drawing.Size(50, 50);
             this.button_23.TabIndex = 23;
+            this.button_23.TabStop = false;
             this.button_23.UseVisualStyleBackColor = false;
             this.button_23.Click += new System.EventHandler(this.button_Click);
             // 
@@ -312,6 +336,7 @@ namespace Industrial_Informatics_Project.Windows
             this.button_24.Name = "button_24";
             this.button_24.Size = new System.Drawing.Size(50, 50);
             this.button_24.TabIndex = 24;
+            this.button_24.TabStop = false;
             this.button_24.UseVisualStyleBackColor = false;
             this.button_24.Click += new System.EventHandler(this.button_Click);
             // 

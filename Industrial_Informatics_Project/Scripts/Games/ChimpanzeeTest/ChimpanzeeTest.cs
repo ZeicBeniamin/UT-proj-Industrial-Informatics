@@ -7,20 +7,33 @@ using System.Threading.Tasks;
 
 namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTest
 {
+    /// <summary>
+    /// The controller and logic of the chimpanzee test game
+    /// </summary>
     public class ChimpanzeeTest : Game
     {
+        // Number of tries the user has
         private int strikes;
+        // How many buttons are avalible in the game
         private int number_of_cells = 25;
+        // How many of numbers are going to be generated 
         private int number_of_numbers;
 
+        // Number of corect guesses 
         private int numbers_corect = 0;
 
+        // Last corect guess
         private int last_number = -1;
 
+        // Sequence of consecutive numbers used in the random number generation
         private List<int> number_sequence = new List<int>();
 
         private ChimpanzeeTest_Window game_window;
 
+        /// <summary>
+        /// Initialization of the games controller
+        /// </summary>
+        /// <param name="difficulty">Game difficulty</param>
         public ChimpanzeeTest(int difficulty)
         {
             set_difficulty(difficulty);
@@ -33,11 +46,19 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTest
             game_window.update_tries(strikes);
         }
 
+        /// <summary>
+        /// Generates a new stage of the game
+        /// </summary>
         public void next_stage()
         {
             game_window.update_buttons(generate_seed(number_of_cells));
         }
 
+        /// <summary>
+        /// Generating a sequence of random numbers with a specific length
+        /// </summary>
+        /// <param name="number_of_cells">Length of the random number sequence</param>
+        /// <returns>The sequence of random numbers</returns>
         private List<int> generate_seed(int number_of_cells)
         {
             List<int> seed = new List<int>();
@@ -56,6 +77,9 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTest
             return seed;
         }
 
+        /// <summary>
+        /// Initializes the consecutive number sequence used in the random generation
+        /// </summary>
         private void init_lists()
         {
             number_sequence.Clear();
@@ -64,6 +88,10 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTest
                 number_sequence.Add(i);
         }
 
+        /// <summary>
+        /// Applies the difficulty 
+        /// </summary>
+        /// <param name="difficulty">Difficulty indicator</param>
         public void check_difficulty(int difficulty)
         {
             switch (difficulty)
@@ -91,6 +119,10 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTest
             }
         }
 
+        /// <summary>
+        /// Verifies if the sequence of buttons pressed is corect
+        /// </summary>
+        /// <param name="number">The number of the pressed button</param>
         public void new_number(int number)
         {
             if (last_number == -1 && number == 1)
@@ -109,7 +141,6 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTest
             else
             {
                 numbers_corect++;
-                Console.WriteLine(numbers_corect);
                 if (numbers_corect == number_of_numbers-1)
                 {
                     game_window.next_visibility(true);
@@ -121,8 +152,9 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTest
             }
         }
 
-
-
+        /// <summary>
+        /// Checkes if the user has any tries left
+        /// </summary>
         private void check_strikes()
         {
             if (strikes == 1)
@@ -135,6 +167,7 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTest
             game_window.update_tries(strikes);
         }
 
+        // Getter for the number_of_cells
         public int get_number_of_cells()
         {
             return number_of_cells;
