@@ -1,4 +1,4 @@
-﻿using Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTest;
+﻿using Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,7 +34,9 @@ namespace Industrial_Informatics_Project.Windows
 
             clear_buttons();
         }
-        
+
+        #region Click events
+
         /// <summary>
         /// Starting the game
         /// </summary>
@@ -55,7 +57,7 @@ namespace Industrial_Informatics_Project.Windows
         /// <param name="e">Argumesnts</param>
         private void end_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("load post game");
+            controller.post_game();
         }
 
         /// <summary>
@@ -86,6 +88,8 @@ namespace Industrial_Informatics_Project.Windows
             ((Button)sender).Enabled = false;
             controller.new_number(int.Parse(((Button)sender).Text));
         }
+
+        #endregion
 
         /// <summary>
         /// Resets the buttons after a stage is finshed
@@ -192,6 +196,16 @@ namespace Industrial_Informatics_Project.Windows
         public void update_tries(int tries)
         {
             tries_lable.Text = "Tries: " + tries;
+        }
+
+        /// <summary>
+        /// X button was pressed and load pre-game window
+        /// </summary>
+        /// <param name="sender">The component that invoke the event</param>
+        /// <param name="e">Argumesnts</param>
+        private void ChimpanzeeTest_Window_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            controller.pre_game();
         }
     }
 }

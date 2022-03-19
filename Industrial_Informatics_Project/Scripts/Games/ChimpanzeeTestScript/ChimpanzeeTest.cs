@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTest
+namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
 {
     /// <summary>
     /// The controller and logic of the chimpanzee test game
     /// </summary>
-    public class ChimpanzeeTest : Game
+    public partial class ChimpanzeeTest : Game
     {
         // Number of tries the user has
         private int strikes;
@@ -28,13 +29,17 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTest
         // Sequence of consecutive numbers used in the random number generation
         private List<int> number_sequence = new List<int>();
 
+        // Game window of the game
         private ChimpanzeeTest_Window game_window;
+
+        // Application controller
+        private Application_Controller application_controller;
 
         /// <summary>
         /// Initialization of the games controller
         /// </summary>
         /// <param name="difficulty">Game difficulty</param>
-        public ChimpanzeeTest(int difficulty)
+        public ChimpanzeeTest(int difficulty, Application_Controller application_controller)
         {
             set_difficulty(difficulty);
 
@@ -44,6 +49,8 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTest
             check_difficulty(difficulty);
 
             game_window.update_tries(strikes);
+
+            this.application_controller = application_controller;
         }
 
         /// <summary>
@@ -171,6 +178,33 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTest
         public int get_number_of_cells()
         {
             return number_of_cells;
+        }
+
+        /// <summary>
+        /// Open the post game window
+        /// </summary>
+        public void post_game()
+        {
+            game_window.Dispose();
+            application_controller.open_window("PostGame");
+        }
+
+        /// <summary>
+        /// Open the pre game window
+        /// </summary>
+        public void pre_game()
+        {
+            game_window.Dispose();
+            application_controller.open_window("PreGame");
+        }
+
+        /// <summary>
+        /// Returns the instance of the game window
+        /// </summary>
+        /// <returns></returns>
+        public Form get_game_window()
+        {
+            return game_window;
         }
     }
 }

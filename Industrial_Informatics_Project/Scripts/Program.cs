@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Industrial_Informatics_Project.Scripts.Games;
+using Industrial_Informatics_Project.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,10 @@ namespace Industrial_Informatics_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_Window());
+
+            Dummy_Window dummy_Window = new Dummy_Window();
+
+            Application.Run();
         }
     }
 }
