@@ -1,6 +1,7 @@
 ﻿using Industrial_Informatics_Project.Windows;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,14 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
         // Application controller
         private Application_Controller application_controller;
 
+        // Game stats 
+        private ChimpanzeeStats game_stats;
+
+        // Stopwatch for memory part
+        Stopwatch memory_stopwatch = new Stopwatch();
+        // Stopwatch for solving part
+        Stopwatch solve_stopwatch = new Stopwatch();
+
         /// <summary>
         /// Initialization of the games controller
         /// </summary>
@@ -51,6 +60,8 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
             game_window.update_tries(strikes);
 
             this.application_controller = application_controller;
+
+            init_game_stats();
         }
 
         /// <summary>
@@ -59,6 +70,7 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
         public void next_stage()
         {
             game_window.update_buttons(generate_seed(number_of_cells));
+            memory_stopwatch.Restart();
         }
 
         /// <summary>
@@ -103,7 +115,7 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
         {
             switch (difficulty)
             {
-                case 0: 
+                case 0:
                     {
                         number_of_numbers = 6;
                         strikes = 3;
@@ -135,6 +147,10 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
             if (last_number == -1 && number == 1)
             {
                 last_number = number;
+                memory_stopwatch.Stop();
+                solve_stopwatch.Restart();
+                game_stats.avg_memory_time += memory_stopwatch.ElapsedMilliseconds;
+                game_stats.game_time += memory_stopwatch.ElapsedMilliseconds;
                 return;
             }
             if (last_number != number - 1)
@@ -143,16 +159,22 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
                 game_window.disable_buttons();
                 last_number = -1;
                 game_window.next_visibility(true);
+                solve_stopwatch.Stop();
                 check_strikes();
             }
             else
             {
                 numbers_corect++;
-                if (numbers_corect == number_of_numbers-1)
+                if (numbers_corect == number_of_numbers - 1)
                 {
                     game_window.next_visibility(true);
                     numbers_corect = 0;
                     last_number = -1;
+
+                    solve_stopwatch.Stop();
+                    game_stats.avg_solve_time += solve_stopwatch.ElapsedMilliseconds;
+                    game_stats.game_time += solve_stopwatch.ElapsedMilliseconds;
+                    game_stats.level += 1;
                 }
                 else
                     last_number = number;
@@ -186,6 +208,12 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
         public void post_game()
         {
             game_window.Dispose();
+
+            game_stats.avg_memory_time /= game_stats.level;
+            game_stats.avg_solve_time /= game_stats.level;
+
+            application_controller.set_game_stats(game_stats);
+
             application_controller.open_window("PostGame");
         }
 
@@ -205,6 +233,22 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
         public Form get_game_window()
         {
             return game_window;
+        }
+
+        /// <summary>
+        /// Initializes the stats for the game
+        /// </summary>
+        private void init_game_stats()
+        {
+            game_stats = new ChimpanzeeStats();
+
+            game_stats.game_name = "Chimpaznee";
+            game_stats.level = 0;
+            game_stats.difficulty = get_difficulty();
+            game_stats.avg_memory_time = 0;
+            game_stats.avg_solve_time = 0;
+            game_stats.game_time = 0;
+            game_stats.date = DateTime.Now;
         }
     }
 }

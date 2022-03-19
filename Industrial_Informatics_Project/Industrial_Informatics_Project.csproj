@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Scripts\Games\Application_Controller.cs" />
+    <Compile Include="Scripts\Games\ChimpanzeeTestScript\ChimpanzeeStats.cs" />
     <Compile Include="Scripts\Games\ChimpanzeeTestScript\ChimpanzeeTest.cs" />
     <Compile Include="Scripts\Games\Game.cs" />
+    <Compile Include="Scripts\Games\GameStats.cs" />
     <Compile Include="Windows\ChimpanzeeTest_Window.cs">
       <SubType>Form</SubType>
     </Compile>

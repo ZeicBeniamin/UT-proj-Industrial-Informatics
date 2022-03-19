@@ -1,4 +1,5 @@
 ﻿using Industrial_Informatics_Project.Scripts.Games;
+using Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,21 @@ namespace Industrial_Informatics_Project.Windows
         {
             InitializeComponent();
             this.application_controller = application_controller;
+        }
+
+        public void update_stats(GameStats game_stats)
+        {
+            switch(game_stats.game_name)
+            {
+                case "Chimpaznee":
+                    {
+                        stats_label.Text = "Game name: " + ((ChimpanzeeStats)game_stats).game_name + "\nGame time: " + ((ChimpanzeeStats)game_stats).game_time;
+                        stats_label.Text += "\nMax level: " + ((ChimpanzeeStats)game_stats).level + "\nMemory average: " + ((ChimpanzeeStats)game_stats).avg_memory_time;
+                        stats_label.Text += "\nSolve average: " + ((ChimpanzeeStats)game_stats).avg_solve_time+ "\nDate: " + ((ChimpanzeeStats)game_stats).date;
+                        stats_label.Text += "\nDifficulty: " + ((ChimpanzeeStats)game_stats).difficulty;
+                    }
+                    break;
+            }
         }
 
         /// <summary>

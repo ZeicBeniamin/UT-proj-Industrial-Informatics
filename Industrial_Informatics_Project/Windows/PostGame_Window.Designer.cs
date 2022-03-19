@@ -30,6 +30,7 @@ namespace Industrial_Informatics_Project.Windows
         private void InitializeComponent()
         {
             this.back_button = new System.Windows.Forms.Button();
+            this.stats_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // back_button
@@ -42,21 +43,33 @@ namespace Industrial_Informatics_Project.Windows
             this.back_button.UseVisualStyleBackColor = true;
             this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
+            // stats_label
+            // 
+            this.stats_label.AutoSize = true;
+            this.stats_label.Location = new System.Drawing.Point(60, 68);
+            this.stats_label.Name = "stats_label";
+            this.stats_label.Size = new System.Drawing.Size(40, 17);
+            this.stats_label.TabIndex = 1;
+            this.stats_label.Text = "Stats";
+            // 
             // PostGame_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 422);
+            this.Controls.Add(this.stats_label);
             this.Controls.Add(this.back_button);
             this.Name = "PostGame_Window";
             this.Text = "PostGame_Window";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PostGame_Window_FormClosing);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button back_button;
+        private System.Windows.Forms.Label stats_label;
     }
 }

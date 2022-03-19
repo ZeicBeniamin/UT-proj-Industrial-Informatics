@@ -17,6 +17,9 @@ namespace Industrial_Informatics_Project.Scripts.Games
         // Game information of the selecte game
         Game game_to_play;
 
+        // Game statistics 
+        GameStats game_stats;
+
         // The current opened window
         Form current_form;
 
@@ -75,6 +78,7 @@ namespace Industrial_Informatics_Project.Scripts.Games
                         exit_app = false;
                         current_form.Dispose();
                         current_form = new PostGame_Window(this);
+                        ((PostGame_Window)current_form).update_stats(game_stats);
                         current_form.Show();
                         exit_app = true;
                     }
@@ -88,7 +92,7 @@ namespace Industrial_Informatics_Project.Scripts.Games
         /// </summary>
         public void load_game()
         {
-            switch(game_to_play.get_name())
+            switch (game_to_play.get_name())
             {
                 case "Chimpanzee":
                     {
@@ -108,7 +112,7 @@ namespace Industrial_Informatics_Project.Scripts.Games
         /// </summary>
         public void exit_application()
         {
-            if(exit_app)
+            if (exit_app)
                 Application.Exit();
         }
 
@@ -128,6 +132,15 @@ namespace Industrial_Informatics_Project.Scripts.Games
         public Game get_game_to_play()
         {
             return game_to_play;
+        }
+
+        /// <summary>
+        /// Sets the game stats object
+        /// </summary>
+        /// <param name="game_stats">The stats object</param>
+        public void set_game_stats(GameStats game_stats)
+        {
+            this.game_stats = game_stats;
         }
     }
 }
