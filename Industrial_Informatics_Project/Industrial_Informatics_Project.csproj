@@ -51,6 +51,8 @@
     <Compile Include="Scripts\Games\ChimpanzeeTestScript\ChimpanzeeTest.cs" />
     <Compile Include="Scripts\Games\Game.cs" />
     <Compile Include="Scripts\Games\GameStats.cs" />
+    <Compile Include="Scripts\Games\StroopTestScript\StroopStats.cs" />
+    <Compile Include="Scripts\Games\StroopTestScript\StroopTest.cs" />
     <Compile Include="Windows\ChimpanzeeTest_Window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +97,12 @@
     <Compile Include="Windows\SignUp_Window.Designer.cs">
       <DependentUpon>SignUp_Window.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\StroopTest_Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\StroopTest_Window.Designer.cs">
+      <DependentUpon>StroopTest_Window.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Windows\ChimpanzeeTest_Window.resx">
       <DependentUpon>ChimpanzeeTest_Window.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\SignUp_Window.resx">
       <DependentUpon>SignUp_Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\StroopTest_Window.resx">
+      <DependentUpon>StroopTest_Window.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
