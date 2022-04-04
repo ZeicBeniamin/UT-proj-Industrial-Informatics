@@ -53,10 +53,8 @@
     <Compile Include="Scripts\Games\GameStats.cs" />
     <Compile Include="Scripts\Games\StroopTestScript\StroopStats.cs" />
     <Compile Include="Scripts\Games\StroopTestScript\StroopTest.cs" />
-    <Compile Include="Windows\ChimpanzeeTest_Window.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows\ChimpanzeeTest_Window.Designer.cs">
+    <Compile Include="Windows\ChimpanzeeTest_Window.cs" />
+    <Compile Include="Windows\ChimpanzeeTest_Window.designer.cs">
       <DependentUpon>ChimpanzeeTest_Window.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Dummy_Window.cs">

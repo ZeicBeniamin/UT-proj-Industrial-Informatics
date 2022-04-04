@@ -1,5 +1,6 @@
 ﻿using Industrial_Informatics_Project.Scripts.Games;
 using Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript;
+using Industrial_Informatics_Project.Scripts.Games.StroopTestScript;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +38,12 @@ namespace Industrial_Informatics_Project.Windows
                         stats_label.Text += "\nMax level: " + ((ChimpanzeeStats)game_stats).level + "\nMemory average: " + ((ChimpanzeeStats)game_stats).avg_memory_time;
                         stats_label.Text += "\nSolve average: " + ((ChimpanzeeStats)game_stats).avg_solve_time+ "\nDate: " + ((ChimpanzeeStats)game_stats).date;
                         stats_label.Text += "\nDifficulty: " + ((ChimpanzeeStats)game_stats).difficulty;
+                    }
+                    break;
+
+                case "Stroop":
+                    {
+                        stats_label.Text = ((StroopStats)game_stats).ToString(); 
                     }
                     break;
             }
