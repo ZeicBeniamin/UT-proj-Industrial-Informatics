@@ -23,11 +23,15 @@ namespace Industrial_Informatics_Project.Scripts.Games
         // The current opened window
         Form current_form;
 
+        // User object
+        User user;
+
         /// <summary>
         /// Constructor
         /// </summary>
         public Application_Controller()
         {
+            user = null;
             current_form = new Form();
         }
 
@@ -141,6 +145,16 @@ namespace Industrial_Informatics_Project.Scripts.Games
         public void set_game_stats(GameStats game_stats)
         {
             this.game_stats = game_stats;
+        }
+
+        public User get_user()
+        {
+            return user;
+        }
+
+        public void set_user(User user)
+        {
+            this.user = user;
         }
     }
 }
