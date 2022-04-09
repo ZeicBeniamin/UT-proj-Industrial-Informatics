@@ -43,7 +43,7 @@ namespace Industrial_Informatics_Project
         }
 
         /// <summary>
-        /// Gets info about the chimpanzee 
+        /// Gets info about the chimpanzee game
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -51,6 +51,21 @@ namespace Industrial_Informatics_Project
         {
             Game choosen_game = new Game();
             choosen_game.set_name("Chimpanzee");
+
+            application_controller.set_game_to_play(choosen_game);
+
+            application_controller.open_window("PreGame");
+        }
+
+        /// <summary>
+        /// Gets info about the quiz game 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void quiz_button_Click(object sender, EventArgs e)
+        {
+            Game choosen_game = new Game();
+            choosen_game.set_name("Quiz");
 
             application_controller.set_game_to_play(choosen_game);
 

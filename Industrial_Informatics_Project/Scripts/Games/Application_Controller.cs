@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Industrial_Informatics_Project.Scripts.Games.QuizScript;
 
 namespace Industrial_Informatics_Project.Scripts.Games
 {
@@ -103,6 +104,16 @@ namespace Industrial_Informatics_Project.Scripts.Games
                         exit_app = false;
                         current_form.Dispose();
                         current_form = new ChimpanzeeTest(0, this).get_game_window();
+                        current_form.Show();
+                        exit_app = true;
+                    }
+                    break;
+
+                case "Quiz":
+                    {
+                        exit_app = false;
+                        current_form.Dispose();
+                        current_form = new Quiz(0, this).get_game_window();
                         current_form.Show();
                         exit_app = true;
                     }

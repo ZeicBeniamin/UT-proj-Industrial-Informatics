@@ -34,6 +34,7 @@ namespace Industrial_Informatics_Project
             this.login_button = new System.Windows.Forms.Button();
             this.logout_button = new System.Windows.Forms.Button();
             this.usermane_label = new System.Windows.Forms.Label();
+            this.quiz_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // chimpanzee_button
@@ -85,11 +86,22 @@ namespace Industrial_Informatics_Project
             this.usermane_label.Size = new System.Drawing.Size(0, 17);
             this.usermane_label.TabIndex = 5;
             // 
+            // quiz_button
+            // 
+            this.quiz_button.Location = new System.Drawing.Point(46, 280);
+            this.quiz_button.Name = "quiz_button";
+            this.quiz_button.Size = new System.Drawing.Size(101, 41);
+            this.quiz_button.TabIndex = 6;
+            this.quiz_button.Text = "Quiz";
+            this.quiz_button.UseVisualStyleBackColor = true;
+            this.quiz_button.Click += new System.EventHandler(this.quiz_button_Click);
+            // 
             // Main_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(525, 450);
+            this.Controls.Add(this.quiz_button);
             this.Controls.Add(this.usermane_label);
             this.Controls.Add(this.logout_button);
             this.Controls.Add(this.login_button);
@@ -110,6 +122,7 @@ namespace Industrial_Informatics_Project
         private System.Windows.Forms.Button login_button;
         private System.Windows.Forms.Button logout_button;
         private System.Windows.Forms.Label usermane_label;
+        private System.Windows.Forms.Button quiz_button;
     }
 }
 

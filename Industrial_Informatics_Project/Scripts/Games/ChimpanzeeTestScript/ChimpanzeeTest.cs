@@ -229,7 +229,7 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
         /// <summary>
         /// Returns the instance of the game window
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Game Window</returns>
         public Form get_game_window()
         {
             return game_window;
