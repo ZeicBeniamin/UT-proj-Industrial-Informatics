@@ -1,6 +1,6 @@
 ﻿namespace Industrial_Informatics_Project.Windows
 {
-    partial class StroopTest_Window
+    partial class StroopTest_Window_Level0
     {
         /// <summary>
         /// Required designer variable.
@@ -38,6 +38,7 @@
             this.pinkButton = new System.Windows.Forms.Button();
             this.timeBar = new System.Windows.Forms.ProgressBar();
             this.timerPressButton = new System.Windows.Forms.Timer(this.components);
+            this.timerMoveLabel = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // coloredWord
@@ -119,6 +120,10 @@
             this.timeBar.Size = new System.Drawing.Size(707, 23);
             this.timeBar.TabIndex = 8;
             // 
+            // timerMoveLabel
+            // 
+            this.timerMoveLabel.Interval = 10;
+            // 
             // StroopTest_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -134,6 +139,7 @@
             this.Controls.Add(this.coloredWord);
             this.Name = "StroopTest_Window";
             this.Text = "StroopTest_Window";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StroopTest_Window_FormClosing);
             this.ResumeLayout(false);
 
         }
@@ -149,5 +155,6 @@
         private System.Windows.Forms.Button pinkButton;
         private System.Windows.Forms.ProgressBar timeBar;
         private System.Windows.Forms.Timer timerPressButton;
+        private System.Windows.Forms.Timer timerMoveLabel;
     }
 }

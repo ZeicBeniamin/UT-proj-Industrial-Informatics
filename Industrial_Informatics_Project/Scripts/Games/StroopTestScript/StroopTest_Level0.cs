@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Industrial_Informatics_Project.Scripts.Games.StroopTestScript
 {
-    public partial class StroopTest : Game
+    public partial class StroopTest_Level0 : Game
     {
         // Game window of the game
-        private StroopTest_Window game_window;
+        private StroopTest_Window_Level0 game_window;
 
         // Application controller
         private Application_Controller application_controller;
@@ -41,10 +41,14 @@ namespace Industrial_Informatics_Project.Scripts.Games.StroopTestScript
         // boolean to check the consecutive strikes
         private Boolean consecutive = false;
 
-        public StroopTest(Application_Controller application_controller)
+        // variable used for Label movement in the view
+        Boolean turn = false;
+        int speed = 20;
+
+        public StroopTest_Level0(Application_Controller application_controller)
         {
             this.application_controller = application_controller;
-            game_window = new StroopTest_Window(this);
+            game_window = new StroopTest_Window_Level0(this);
             game_stats = new StroopStats();
         }
 
@@ -125,6 +129,31 @@ namespace Industrial_Informatics_Project.Scripts.Games.StroopTestScript
         public void updateTotalTime(double addedTime)
         {
             this.game_stats.addToTotalTime(addedTime);
+        }
+
+        public void moveLabel(Label coloredWord)
+        {
+            if (coloredWord.Location.X > 200 && !turn)
+            {
+                coloredWord.Location = new Point(coloredWord.Location.X - speed, coloredWord.Location.Y);
+            }
+            else if (coloredWord.Location.X < 200 && !turn)
+            {
+                coloredWord.Location = new Point(coloredWord.Location.X + speed, coloredWord.Location.Y);
+                turn = true;
+            }
+            else if (turn)
+            {
+                coloredWord.Location = new Point(coloredWord.Location.X + speed, coloredWord.Location.Y);
+                if (coloredWord.Location.X > 300)
+                    turn = false;
+            }
+        }
+
+        public void pre_game()
+        {
+            game_window.Dispose();
+            application_controller.open_window("PreGame");
         }
 
         public void post_game()

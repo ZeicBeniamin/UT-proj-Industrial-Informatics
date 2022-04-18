@@ -52,8 +52,12 @@
     <Compile Include="Scripts\Games\Game.cs" />
     <Compile Include="Scripts\Games\GameStats.cs" />
     <Compile Include="Scripts\Games\StroopTestScript\StroopStats.cs" />
-    <Compile Include="Scripts\Games\StroopTestScript\StroopTest.cs" />
-    <Compile Include="Windows\ChimpanzeeTest_Window.cs" />
+    <Compile Include="Scripts\Games\StroopTestScript\StroopTest_Level2.cs" />
+    <Compile Include="Scripts\Games\StroopTestScript\StroopTest_Level1.cs" />
+    <Compile Include="Scripts\Games\StroopTestScript\StroopTest_Level0.cs" />
+    <Compile Include="Windows\ChimpanzeeTest_Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Windows\ChimpanzeeTest_Window.designer.cs">
       <DependentUpon>ChimpanzeeTest_Window.cs</DependentUpon>
     </Compile>
@@ -95,11 +99,23 @@
     <Compile Include="Windows\SignUp_Window.Designer.cs">
       <DependentUpon>SignUp_Window.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\StroopTest_Window.cs">
+    <Compile Include="Windows\StroopTest_Window_Level2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\StroopTest_Window.Designer.cs">
-      <DependentUpon>StroopTest_Window.cs</DependentUpon>
+    <Compile Include="Windows\StroopTest_Window_Level2.Designer.cs">
+      <DependentUpon>StroopTest_Window_Level2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StroopTest_Window_Level1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\StroopTest_Window_Level1.Designer.cs">
+      <DependentUpon>StroopTest_Window_Level1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StroopTest_Window_Level0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\StroopTest_Window_Level0.Designer.cs">
+      <DependentUpon>StroopTest_Window_Level0.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Windows\ChimpanzeeTest_Window.resx">
       <DependentUpon>ChimpanzeeTest_Window.cs</DependentUpon>
@@ -131,8 +147,14 @@
     <EmbeddedResource Include="Windows\SignUp_Window.resx">
       <DependentUpon>SignUp_Window.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\StroopTest_Window.resx">
-      <DependentUpon>StroopTest_Window.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\StroopTest_Window_Level2.resx">
+      <DependentUpon>StroopTest_Window_Level2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\StroopTest_Window_Level1.resx">
+      <DependentUpon>StroopTest_Window_Level1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\StroopTest_Window_Level0.resx">
+      <DependentUpon>StroopTest_Window_Level0.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
