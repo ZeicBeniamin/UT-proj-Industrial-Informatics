@@ -26,6 +26,8 @@ namespace Industrial_Informatics_Project
         {
             InitializeComponent();
             this.application_controller = application_controller;
+
+            check_user_login();
         }
 
         #region Click events
@@ -41,7 +43,7 @@ namespace Industrial_Informatics_Project
         }
 
         /// <summary>
-        /// Gets info about the chimpanzee 
+        /// Gets info about the chimpanzee game
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -64,6 +66,21 @@ namespace Industrial_Informatics_Project
             application_controller.open_window("PreGame");
         }
 
+        /// <summary>
+        /// Gets info about the quiz game 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void quiz_button_Click(object sender, EventArgs e)
+        {
+            Game choosen_game = new Game();
+            choosen_game.set_name("Quiz");
+
+            application_controller.set_game_to_play(choosen_game);
+
+            application_controller.open_window("PreGame");
+        }
+
         #endregion
 
         /// <summary>
@@ -76,6 +93,47 @@ namespace Industrial_Informatics_Project
             application_controller.exit_application();
         }
 
-       
+        /// <summary>
+        /// Check if a user is logged on 
+        /// </summary>
+        private void check_user_login()
+        {
+            if (application_controller.get_user() != null)
+            {
+                register_button.Visible = false;
+                login_button.Visible = false;
+
+                update_for_user();
+
+                logout_button.Visible = true;
+            }
+            else
+            {
+                register_button.Visible = true;
+                login_button.Visible = true;
+
+                logout_button.Visible = false;
+            }
+        }
+
+        /// <summary>
+        /// Update the user interface with the user information
+        /// </summary>
+        private void update_for_user()
+        {
+            usermane_label.Text = application_controller.get_user().username;
+        }
+
+        /// <summary>
+        /// Log the user out
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            application_controller.set_user(null);
+
+            application_controller.open_window("Main");
+        }
     }
 }

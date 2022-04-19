@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Industrial_Informatics_Project.Scripts.Games.QuizScript;
 using Industrial_Informatics_Project.Scripts.Games.StroopTestScript;
 
 namespace Industrial_Informatics_Project.Scripts.Games
@@ -24,11 +25,15 @@ namespace Industrial_Informatics_Project.Scripts.Games
         // The current opened window
         Form current_form;
 
+        // User object
+        User user;
+
         /// <summary>
         /// Constructor
         /// </summary>
         public Application_Controller()
         {
+            user = null;
             current_form = new Form();
         }
 
@@ -119,6 +124,16 @@ namespace Industrial_Informatics_Project.Scripts.Games
                         current_form.Show();
                         exit_app = true;
                     }
+		break;
+		case "Quiz":
+                    {
+                        exit_app = false;
+                        current_form.Dispose();
+                        current_form = new Quiz(0, this).get_game_window();
+                        current_form.Show();
+                        exit_app = true;
+                    }
+
                     break;
                 default: MessageBox.Show("Invalid game: " + game_to_play.get_name()); break;
             }
@@ -158,6 +173,16 @@ namespace Industrial_Informatics_Project.Scripts.Games
         public void set_game_stats(GameStats game_stats)
         {
             this.game_stats = game_stats;
+        }
+
+        public User get_user()
+        {
+            return user;
+        }
+
+        public void set_user(User user)
+        {
+            this.user = user;
         }
     }
 }
