@@ -1,6 +1,7 @@
 ﻿using Industrial_Informatics_Project.Scripts.Games;
 using Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript;
 using Industrial_Informatics_Project.Scripts.Games.QuizScript;
+using Industrial_Informatics_Project.Scripts.Games.StroopTestScript;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,6 +51,11 @@ namespace Industrial_Informatics_Project.Windows
                         stats_label.Text += "\nCorrect answers: " + ((QuizStats)game_stats).correct_answers + "\nIncorrect answers: " + ((QuizStats)game_stats).incorrect_answers;
                         stats_label.Text += "\nDate: " + ((QuizStats)game_stats).date;
                         stats_label.Text += "\nDifficulty: " + ((QuizStats)game_stats).difficulty;
+                    }
+                    break;
+                case "Stroop":
+                    {
+                        stats_label.Text = ((StroopStats)game_stats).ToString(); 
                     }
                     break;
             }

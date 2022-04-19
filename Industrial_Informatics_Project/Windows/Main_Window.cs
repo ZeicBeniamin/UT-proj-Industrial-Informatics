@@ -56,6 +56,15 @@ namespace Industrial_Informatics_Project
 
             application_controller.open_window("PreGame");
         }
+        private void stroop_button_Click(object sender, EventArgs e)
+        {
+            Game choosen_game = new Game();
+            choosen_game.set_name("Stroop");
+
+            application_controller.set_game_to_play(choosen_game);
+
+            application_controller.open_window("PreGame");
+        }
 
         /// <summary>
         /// Gets info about the quiz game 

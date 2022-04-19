@@ -35,6 +35,7 @@ namespace Industrial_Informatics_Project
             this.logout_button = new System.Windows.Forms.Button();
             this.usermane_label = new System.Windows.Forms.Label();
             this.quiz_button = new System.Windows.Forms.Button();
+            this.stroop_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // chimpanzee_button
@@ -96,6 +97,16 @@ namespace Industrial_Informatics_Project
             this.quiz_button.UseVisualStyleBackColor = true;
             this.quiz_button.Click += new System.EventHandler(this.quiz_button_Click);
             // 
+            // stroop_button
+            // 
+            this.stroop_button.Location = new System.Drawing.Point(52, 221);
+            this.stroop_button.Name = "stroop_button";
+            this.stroop_button.Size = new System.Drawing.Size(114, 49);
+            this.stroop_button.TabIndex = 3;
+            this.stroop_button.Text = "Stroop Test";
+            this.stroop_button.UseVisualStyleBackColor = true;
+            this.stroop_button.Click += new System.EventHandler(this.stroop_button_Click);
+            // 
             // Main_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -104,9 +115,15 @@ namespace Industrial_Informatics_Project
             this.Controls.Add(this.quiz_button);
             this.Controls.Add(this.usermane_label);
             this.Controls.Add(this.logout_button);
+
+            this.Controls.Add(this.stroop_button);
+	    this.ClientSize = new System.Drawing.Size(525, 450);
+
+	    
             this.Controls.Add(this.login_button);
             this.Controls.Add(this.register_button);
             this.Controls.Add(this.chimpanzee_button);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Main_Window";
             this.Text = "Main_Windows";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_Window_FormClosing);
@@ -123,6 +140,7 @@ namespace Industrial_Informatics_Project
         private System.Windows.Forms.Button logout_button;
         private System.Windows.Forms.Label usermane_label;
         private System.Windows.Forms.Button quiz_button;
+        private System.Windows.Forms.Button stroop_button;
     }
 }
 
