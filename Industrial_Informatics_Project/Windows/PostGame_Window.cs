@@ -1,5 +1,7 @@
 ﻿using Industrial_Informatics_Project.Scripts.Games;
 using Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript;
+using Industrial_Informatics_Project.Scripts.Games.QuizScript;
+using Industrial_Informatics_Project.Scripts.Games.StroopTestScript;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +29,10 @@ namespace Industrial_Informatics_Project.Windows
             this.application_controller = application_controller;
         }
 
+        /// <summary>
+        /// Updates the UI with the states of the games
+        /// </summary>
+        /// <param name="game_stats">The game stats</param>
         public void update_stats(GameStats game_stats)
         {
             switch(game_stats.game_name)
@@ -37,6 +43,19 @@ namespace Industrial_Informatics_Project.Windows
                         stats_label.Text += "\nMax level: " + ((ChimpanzeeStats)game_stats).level + "\nMemory average: " + ((ChimpanzeeStats)game_stats).avg_memory_time;
                         stats_label.Text += "\nSolve average: " + ((ChimpanzeeStats)game_stats).avg_solve_time+ "\nDate: " + ((ChimpanzeeStats)game_stats).date;
                         stats_label.Text += "\nDifficulty: " + ((ChimpanzeeStats)game_stats).difficulty;
+                    }
+                    break;
+                case "Quiz":
+                    {
+                        stats_label.Text = "Game name: " + ((QuizStats)game_stats).game_name + "\nTime remainig: " + ((QuizStats)game_stats).minutes + ":" + ((QuizStats)game_stats).seconds;
+                        stats_label.Text += "\nCorrect answers: " + ((QuizStats)game_stats).correct_answers + "\nIncorrect answers: " + ((QuizStats)game_stats).incorrect_answers;
+                        stats_label.Text += "\nDate: " + ((QuizStats)game_stats).date;
+                        stats_label.Text += "\nDifficulty: " + ((QuizStats)game_stats).difficulty;
+                    }
+                    break;
+                case "Stroop":
+                    {
+                        stats_label.Text = ((StroopStats)game_stats).ToString(); 
                     }
                     break;
             }

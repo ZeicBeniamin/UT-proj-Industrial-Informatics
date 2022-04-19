@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,6 +52,14 @@
     <Compile Include="Scripts\Games\ChimpanzeeTestScript\ChimpanzeeTest.cs" />
     <Compile Include="Scripts\Games\Game.cs" />
     <Compile Include="Scripts\Games\GameStats.cs" />
+    <Compile Include="Scripts\Games\StroopTestScript\StroopStats.cs" />
+    <Compile Include="Scripts\Games\StroopTestScript\StroopTest_Level2.cs" />
+    <Compile Include="Scripts\Games\StroopTestScript\StroopTest_Level1.cs" />
+    <Compile Include="Scripts\Games\StroopTestScript\StroopTest_Level0.cs" />
+    <Compile Include="Scripts\Games\QuizScript\Question.cs" />
+    <Compile Include="Scripts\Games\QuizScript\Quiz.cs" />
+    <Compile Include="Scripts\Games\QuizScript\QuizStats.cs" />
+    <Compile Include="Scripts\User.cs" />
     <Compile Include="Windows\ChimpanzeeTest_Window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,11 +98,35 @@
     <Compile Include="Windows\PreGame_Window.Designer.cs">
       <DependentUpon>PreGame_Window.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Quiz_Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Quiz_Window.Designer.cs">
+      <DependentUpon>Quiz_Window.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\SignUp_Window.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Windows\SignUp_Window.Designer.cs">
       <DependentUpon>SignUp_Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StroopTest_Window_Level2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\StroopTest_Window_Level2.Designer.cs">
+      <DependentUpon>StroopTest_Window_Level2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StroopTest_Window_Level1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\StroopTest_Window_Level1.Designer.cs">
+      <DependentUpon>StroopTest_Window_Level1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StroopTest_Window_Level0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\StroopTest_Window_Level0.Designer.cs">
+      <DependentUpon>StroopTest_Window_Level0.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Windows\ChimpanzeeTest_Window.resx">
       <DependentUpon>ChimpanzeeTest_Window.cs</DependentUpon>
@@ -122,8 +155,20 @@
     <EmbeddedResource Include="Windows\PreGame_Window.resx">
       <DependentUpon>PreGame_Window.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Quiz_Window.resx">
+      <DependentUpon>Quiz_Window.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\SignUp_Window.resx">
       <DependentUpon>SignUp_Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\StroopTest_Window_Level2.resx">
+      <DependentUpon>StroopTest_Window_Level2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\StroopTest_Window_Level1.resx">
+      <DependentUpon>StroopTest_Window_Level1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\StroopTest_Window_Level0.resx">
+      <DependentUpon>StroopTest_Window_Level0.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
