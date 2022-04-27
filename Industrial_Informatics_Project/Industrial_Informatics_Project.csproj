@@ -60,6 +60,18 @@
     <Compile Include="Scripts\Games\QuizScript\Quiz.cs" />
     <Compile Include="Scripts\Games\QuizScript\QuizStats.cs" />
     <Compile Include="Scripts\User.cs" />
+    <Compile Include="Windows\Admin Windows\Admin_Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Admin Windows\Admin_Window.Designer.cs">
+      <DependentUpon>Admin_Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin Windows\Question_Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Admin Windows\Question_Window.Designer.cs">
+      <DependentUpon>Question_Window.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ChimpanzeeTest_Window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +140,12 @@
     <Compile Include="Windows\StroopTest_Window_Level0.Designer.cs">
       <DependentUpon>StroopTest_Window_Level0.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Windows\Admin Windows\Admin_Window.resx">
+      <DependentUpon>Admin_Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Admin Windows\Question_Window.resx">
+      <DependentUpon>Question_Window.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\ChimpanzeeTest_Window.resx">
       <DependentUpon>ChimpanzeeTest_Window.cs</DependentUpon>
     </EmbeddedResource>

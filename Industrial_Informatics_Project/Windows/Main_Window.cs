@@ -135,5 +135,15 @@ namespace Industrial_Informatics_Project
 
             application_controller.open_window("Main");
         }
+
+        /// <summary>
+        /// TO BE REMOVED
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void temp_button_Click(object sender, EventArgs e)
+        {
+            application_controller.open_window("Questions");
+        }
     }
 }

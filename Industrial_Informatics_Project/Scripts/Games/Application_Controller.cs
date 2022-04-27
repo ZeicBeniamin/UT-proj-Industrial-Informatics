@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Industrial_Informatics_Project.Scripts.Games.QuizScript;
 using Industrial_Informatics_Project.Scripts.Games.StroopTestScript;
+using Industrial_Informatics_Project.Windows.Admin_Windows;
 
 namespace Industrial_Informatics_Project.Scripts.Games
 {
@@ -85,6 +86,24 @@ namespace Industrial_Informatics_Project.Scripts.Games
                         current_form.Dispose();
                         current_form = new PostGame_Window(this);
                         ((PostGame_Window)current_form).update_stats(game_stats);
+                        current_form.Show();
+                        exit_app = true;
+                    }
+                    break;
+                case "Admin":
+                    {
+                        exit_app = false;
+                        current_form.Dispose();
+                        current_form = new Admin_Window(this);
+                        current_form.Show();
+                        exit_app = true;
+                    }
+                    break;
+                case "Questions":
+                    {
+                        exit_app = false;
+                        current_form.Dispose();
+                        current_form = new Question_Window(this);
                         current_form.Show();
                         exit_app = true;
                     }
