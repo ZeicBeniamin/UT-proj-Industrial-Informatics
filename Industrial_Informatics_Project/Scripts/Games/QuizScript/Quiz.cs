@@ -50,11 +50,11 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
 
             questions = new Question[5];
 
-            questions[0] = new Question(0, "text  mai lung la intrebare sa vad daca face wrap labelu la text daca e mai lunt aaaaaaaaaaaaaaaaaaaaaaaaaa", "d;g;h;i", "d", 1);
-            questions[1] = new Question(1, "nu", "d;g;h;i", "g", 1);
-            questions[2] = new Question(2, "poate", "d;g;h;i", "h", 1);
-            questions[3] = new Question(3, "sepoate", "d;g;h;i", "i", 1);
-            questions[4] = new Question(4, "sigur", "d;g;h;f", "f", 1);
+            questions[0] = new Question(0, 0, "text  mai lung la intrebare sa vad daca face wrap labelu la text daca e mai lunt aaaaaaaaaaaaaaaaaaaaaaaaaa", "d;g;h;i", "d", 1);
+            questions[1] = new Question(1, 0, "nu", "d;g;h;i", "g", 1);
+            questions[2] = new Question(2, 0, "poate", "d;g;h;i", "h", 1);
+            questions[3] = new Question(3, 0, "sepoate", "d;g;h;i", "i", 1);
+            questions[4] = new Question(4, 0, "sigur", "d;g;h;f", "f", 1);
         }
 
         /// <summary>

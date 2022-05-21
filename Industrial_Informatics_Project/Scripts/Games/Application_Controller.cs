@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Industrial_Informatics_Project.Scripts.Games.QuizScript;
 using Industrial_Informatics_Project.Scripts.Games.StroopTestScript;
+using Industrial_Informatics_Project.Windows.Admin_Windows;
 
 namespace Industrial_Informatics_Project.Scripts.Games
 {
@@ -89,6 +90,24 @@ namespace Industrial_Informatics_Project.Scripts.Games
                         exit_app = true;
                     }
                     break;
+                case "Admin":
+                    {
+                        exit_app = false;
+                        current_form.Dispose();
+                        current_form = new Admin_Window(this);
+                        current_form.Show();
+                        exit_app = true;
+                    }
+                    break;
+                case "Questions":
+                    {
+                        exit_app = false;
+                        current_form.Dispose();
+                        current_form = new Question_Window(this);
+                        current_form.Show();
+                        exit_app = true;
+                    }
+                    break;
                 default: MessageBox.Show("Invalid windows: " + windows); break;
             }
         }
@@ -104,7 +123,7 @@ namespace Industrial_Informatics_Project.Scripts.Games
                     {
                         exit_app = false;
                         current_form.Dispose();
-                        current_form = new ChimpanzeeTest(0, this).get_game_window();
+                        current_form = new ChimpanzeeTest(game_to_play.get_difficulty(), this).get_game_window();
                         current_form.Show();
                         exit_app = true;
                     }
@@ -113,6 +132,7 @@ namespace Industrial_Informatics_Project.Scripts.Games
                     {
                         exit_app = false;
                         current_form.Dispose();
+//<<<<<<< HEAD
                         int difficulty = 2;
                         if(difficulty == 0)
                         current_form = new StroopTest_Level0(this).get_game_window();
@@ -120,6 +140,17 @@ namespace Industrial_Informatics_Project.Scripts.Games
                         current_form = new StroopTest_Level1(this).get_game_window();
                         else if(difficulty == 2)
                         current_form = new StroopTest_Level2(this).get_game_window();
+//=======
+
+                        if(game_to_play.get_difficulty() == 0)
+                            current_form = new StroopTest_Level0(this).get_game_window();
+                        else if(game_to_play.get_difficulty() == 1)
+                            current_form = new StroopTest_Level1(this).get_game_window();
+                        else if(game_to_play.get_difficulty() == 2)
+                            current_form = new StroopTest_Level2(this).get_game_window();
+                        else
+                            current_form = new StroopTest_Level0(this).get_game_window();
+//>>>>>>> main
 
                         current_form.Show();
                         exit_app = true;
@@ -129,11 +160,10 @@ namespace Industrial_Informatics_Project.Scripts.Games
                     {
                         exit_app = false;
                         current_form.Dispose();
-                        current_form = new Quiz(0, this).get_game_window();
+                        current_form = new Quiz(game_to_play.get_difficulty(), this).get_game_window();
                         current_form.Show();
                         exit_app = true;
                     }
-
                     break;
                 default: MessageBox.Show("Invalid game: " + game_to_play.get_name()); break;
             }
@@ -175,14 +205,34 @@ namespace Industrial_Informatics_Project.Scripts.Games
             this.game_stats = game_stats;
         }
 
+        /// <summary>
+        /// Returns the user object
+        /// </summary>
+        /// <returns></returns>
         public User get_user()
         {
             return user;
         }
 
+        /// <summary>
+        /// Sets the user object
+        /// </summary>
+        /// <param name="user">The user object</param>
         public void set_user(User user)
         {
             this.user = user;
+        }
+
+        /// <summary>
+        /// Set the difficulty for the game
+        /// </summary>
+        /// <param name="difficulty">The game difficulty:
+        ///                            0 - esay
+        ///                            1 - normal
+        ///                            2 - hard</param>
+        public void set_game_difficulty(int difficulty)
+        {
+            game_to_play.set_difficulty(difficulty);
         }
     }
 }

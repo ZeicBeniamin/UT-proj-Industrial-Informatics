@@ -47,16 +47,31 @@ namespace Industrial_Informatics_Project.Windows
         {
             if (check_information())
             {
-                // TODO: check database for the user
+                if (!check_admin())
+                {
+                    // TODO: check database for the user
 
-                // Just for testing
-                User user = new User();
-                user.username = "darius";
+                    // Just for testing
+                    User user = new User();
+                    user.username = "darius";
 
-                application_controller.set_user(user);
+                    application_controller.set_user(user);
 
-                application_controller.open_window("Main");
+                    application_controller.open_window("Main");
+                }
+                else
+                    application_controller.open_window("Admin");
             }
+        }
+
+        /// <summary>
+        /// Checkes if the admin logs on
+        /// </summary>
+        private bool check_admin()
+        {
+            if (userman_textbox.Text == "admin" && password_textbox.Text == "admin")
+                return true;
+            return false;
         }
 
         /// <summary>

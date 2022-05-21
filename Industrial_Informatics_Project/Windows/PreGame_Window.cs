@@ -45,5 +45,30 @@ namespace Industrial_Informatics_Project.Windows
         {
             application_controller.open_window("Main");
         }
+
+        private void diff_button_Click(object sender, EventArgs e)
+        {
+            switch(((Button)sender).Text)
+            {
+                case "Easy": 
+                    { 
+                        application_controller.set_game_difficulty(0);
+                        difficulty_label.Text = "Selected difficulty: Easy";
+                    }
+                    break;
+                case "Medium": 
+                    { 
+                        application_controller.set_game_difficulty(1);
+                        difficulty_label.Text = "Selected difficulty: Medium";
+                    }
+                    break;
+                case "Hard":
+                    {
+                        application_controller.set_game_difficulty(2);
+                        difficulty_label.Text = "Selected difficulty: Hard";
+                    }
+                    break;
+            }
+        }
     }
 }

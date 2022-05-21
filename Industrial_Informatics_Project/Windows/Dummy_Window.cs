@@ -18,7 +18,7 @@ namespace Industrial_Informatics_Project.Windows
         public Dummy_Window()
         {
             InitializeComponent();
-            application.open_window("Main");
+            application.open_window("Register");
         }
     }
 }
