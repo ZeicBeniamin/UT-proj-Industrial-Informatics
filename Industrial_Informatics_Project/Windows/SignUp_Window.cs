@@ -14,8 +14,6 @@ namespace Industrial_Informatics_Project.Windows
 {
     public partial class SignUp_Window : Form
     {
-        string usermane;
-        string email;
 
         // Application object 
         Application_Controller application_controller;
@@ -39,12 +37,20 @@ namespace Industrial_Informatics_Project.Windows
         {
             if(check_inforamtion())
             {
-                // TO DO: INSERT INFORMATION INTO THE DATABASE
-
-                // If data insertion succesfull
-                clear_information();
-                label_error.ForeColor = Color.Green;
-                label_error.Text = "Account created succesfully!";
+                if(DataModel.DataHandler.existsUser(email_textbox.Text))
+                {
+                    label_error.Text = "Email already used by another account!";
+                }
+                else
+                {
+                    if (DataModel.DataHandler.insertUser(username_textbox.Text, email_textbox.Text, password_textbox.Text))
+                    {
+                        // If data insertion succesfull
+                        clear_information();
+                        label_error.ForeColor = Color.Green;
+                        label_error.Text = "Account created succesfully!";
+                    }
+                }
             }
         }
 
