@@ -21,6 +21,7 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
         {
             InitializeComponent();
             this.application_controller = application_controller;
+            addToCategories(DataModel.DataHandler.getCategories());
         }
 
         /// <summary>
@@ -65,7 +66,9 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
                 }
 
                 Question question = new Question(0, category_comboBox.SelectedIndex, question_richTextBox.Text.Trim(), options, answer, difficulty_comboBox.SelectedIndex);
-                // TO DO: INSERT QUSETION 
+
+                // INSERT QUSETION 
+                DataModel.DataHandler.insertQuestion(question);
 
                 clear_controles();
                 MessageBox.Show(question.ToString());
@@ -112,5 +115,14 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
             option_three_radio.Checked = false;
             option_four_radio.Checked = false;
         }
+
+        private void addToCategories(List<String> categories)
+        {
+            foreach (String category in categories)
+            {
+                category_comboBox.Items.Add(category);
+            }
+        }
+
     }
 }

@@ -50,9 +50,10 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
             // 
             // add_button
             // 
-            this.add_button.Location = new System.Drawing.Point(473, 404);
+            this.add_button.Location = new System.Drawing.Point(532, 505);
+            this.add_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.add_button.Name = "add_button";
-            this.add_button.Size = new System.Drawing.Size(85, 34);
+            this.add_button.Size = new System.Drawing.Size(96, 42);
             this.add_button.TabIndex = 0;
             this.add_button.Text = "Add";
             this.add_button.UseVisualStyleBackColor = true;
@@ -60,9 +61,10 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
             // 
             // clear_button
             // 
-            this.clear_button.Location = new System.Drawing.Point(12, 404);
+            this.clear_button.Location = new System.Drawing.Point(14, 505);
+            this.clear_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.clear_button.Name = "clear_button";
-            this.clear_button.Size = new System.Drawing.Size(85, 34);
+            this.clear_button.Size = new System.Drawing.Size(96, 42);
             this.clear_button.TabIndex = 1;
             this.clear_button.Text = "Clear";
             this.clear_button.UseVisualStyleBackColor = true;
@@ -71,44 +73,46 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
             // add_question_label
             // 
             this.add_question_label.AutoSize = true;
-            this.add_question_label.Location = new System.Drawing.Point(12, 13);
+            this.add_question_label.Location = new System.Drawing.Point(14, 16);
             this.add_question_label.Name = "add_question_label";
-            this.add_question_label.Size = new System.Drawing.Size(91, 17);
+            this.add_question_label.Size = new System.Drawing.Size(103, 20);
             this.add_question_label.TabIndex = 2;
             this.add_question_label.Text = "Add question";
             // 
             // catrgory_label
             // 
             this.catrgory_label.AutoSize = true;
-            this.catrgory_label.Location = new System.Drawing.Point(654, 13);
+            this.catrgory_label.Location = new System.Drawing.Point(736, 16);
             this.catrgory_label.Name = "catrgory_label";
-            this.catrgory_label.Size = new System.Drawing.Size(69, 17);
+            this.catrgory_label.Size = new System.Drawing.Size(77, 20);
             this.catrgory_label.TabIndex = 3;
             this.catrgory_label.Text = "Category ";
             // 
             // question_richTextBox
             // 
-            this.question_richTextBox.Location = new System.Drawing.Point(24, 73);
+            this.question_richTextBox.Location = new System.Drawing.Point(27, 91);
+            this.question_richTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.question_richTextBox.Name = "question_richTextBox";
-            this.question_richTextBox.Size = new System.Drawing.Size(446, 56);
+            this.question_richTextBox.Size = new System.Drawing.Size(501, 69);
             this.question_richTextBox.TabIndex = 4;
             this.question_richTextBox.Text = "";
             // 
             // question_label
             // 
             this.question_label.AutoSize = true;
-            this.question_label.Location = new System.Drawing.Point(24, 50);
+            this.question_label.Location = new System.Drawing.Point(27, 62);
             this.question_label.Name = "question_label";
-            this.question_label.Size = new System.Drawing.Size(65, 17);
+            this.question_label.Size = new System.Drawing.Size(73, 20);
             this.question_label.TabIndex = 5;
             this.question_label.Text = "Question";
             // 
             // option_one_radio
             // 
             this.option_one_radio.AutoSize = true;
-            this.option_one_radio.Location = new System.Drawing.Point(68, 165);
+            this.option_one_radio.Location = new System.Drawing.Point(76, 206);
+            this.option_one_radio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.option_one_radio.Name = "option_one_radio";
-            this.option_one_radio.Size = new System.Drawing.Size(17, 16);
+            this.option_one_radio.Size = new System.Drawing.Size(21, 20);
             this.option_one_radio.TabIndex = 6;
             this.option_one_radio.TabStop = true;
             this.option_one_radio.UseVisualStyleBackColor = true;
@@ -116,9 +120,10 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
             // option_two_radio
             // 
             this.option_two_radio.AutoSize = true;
-            this.option_two_radio.Location = new System.Drawing.Point(68, 219);
+            this.option_two_radio.Location = new System.Drawing.Point(76, 274);
+            this.option_two_radio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.option_two_radio.Name = "option_two_radio";
-            this.option_two_radio.Size = new System.Drawing.Size(17, 16);
+            this.option_two_radio.Size = new System.Drawing.Size(21, 20);
             this.option_two_radio.TabIndex = 7;
             this.option_two_radio.TabStop = true;
             this.option_two_radio.UseVisualStyleBackColor = true;
@@ -126,9 +131,10 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
             // option_three_radio
             // 
             this.option_three_radio.AutoSize = true;
-            this.option_three_radio.Location = new System.Drawing.Point(68, 277);
+            this.option_three_radio.Location = new System.Drawing.Point(76, 346);
+            this.option_three_radio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.option_three_radio.Name = "option_three_radio";
-            this.option_three_radio.Size = new System.Drawing.Size(17, 16);
+            this.option_three_radio.Size = new System.Drawing.Size(21, 20);
             this.option_three_radio.TabIndex = 8;
             this.option_three_radio.TabStop = true;
             this.option_three_radio.UseVisualStyleBackColor = true;
@@ -136,64 +142,65 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
             // option_four_radio
             // 
             this.option_four_radio.AutoSize = true;
-            this.option_four_radio.Location = new System.Drawing.Point(68, 330);
+            this.option_four_radio.Location = new System.Drawing.Point(76, 412);
+            this.option_four_radio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.option_four_radio.Name = "option_four_radio";
-            this.option_four_radio.Size = new System.Drawing.Size(17, 16);
+            this.option_four_radio.Size = new System.Drawing.Size(21, 20);
             this.option_four_radio.TabIndex = 9;
             this.option_four_radio.TabStop = true;
             this.option_four_radio.UseVisualStyleBackColor = true;
             // 
             // option_one_richTextBox
             // 
-            this.option_one_richTextBox.Location = new System.Drawing.Point(91, 165);
+            this.option_one_richTextBox.Location = new System.Drawing.Point(102, 206);
+            this.option_one_richTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.option_one_richTextBox.Name = "option_one_richTextBox";
-            this.option_one_richTextBox.Size = new System.Drawing.Size(332, 38);
+            this.option_one_richTextBox.Size = new System.Drawing.Size(373, 46);
             this.option_one_richTextBox.TabIndex = 10;
             this.option_one_richTextBox.Text = "";
             // 
             // option_two_richTextBox
             // 
-            this.option_two_richTextBox.Location = new System.Drawing.Point(91, 219);
+            this.option_two_richTextBox.Location = new System.Drawing.Point(102, 274);
+            this.option_two_richTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.option_two_richTextBox.Name = "option_two_richTextBox";
-            this.option_two_richTextBox.Size = new System.Drawing.Size(332, 38);
+            this.option_two_richTextBox.Size = new System.Drawing.Size(373, 46);
             this.option_two_richTextBox.TabIndex = 11;
             this.option_two_richTextBox.Text = "";
             // 
             // option_three_richTextBox
             // 
-            this.option_three_richTextBox.Location = new System.Drawing.Point(91, 277);
+            this.option_three_richTextBox.Location = new System.Drawing.Point(102, 346);
+            this.option_three_richTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.option_three_richTextBox.Name = "option_three_richTextBox";
-            this.option_three_richTextBox.Size = new System.Drawing.Size(332, 38);
+            this.option_three_richTextBox.Size = new System.Drawing.Size(373, 46);
             this.option_three_richTextBox.TabIndex = 12;
             this.option_three_richTextBox.Text = "";
             // 
             // option_four_richTextBox
             // 
-            this.option_four_richTextBox.Location = new System.Drawing.Point(91, 330);
+            this.option_four_richTextBox.Location = new System.Drawing.Point(102, 412);
+            this.option_four_richTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.option_four_richTextBox.Name = "option_four_richTextBox";
-            this.option_four_richTextBox.Size = new System.Drawing.Size(332, 38);
+            this.option_four_richTextBox.Size = new System.Drawing.Size(373, 46);
             this.option_four_richTextBox.TabIndex = 13;
             this.option_four_richTextBox.Text = "";
             // 
             // category_comboBox
             // 
             this.category_comboBox.FormattingEnabled = true;
-            this.category_comboBox.Items.AddRange(new object[] {
-            "space",
-            "earth",
-            "math",
-            "literature"});
-            this.category_comboBox.Location = new System.Drawing.Point(670, 50);
+            this.category_comboBox.Location = new System.Drawing.Point(754, 62);
+            this.category_comboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.category_comboBox.Name = "category_comboBox";
-            this.category_comboBox.Size = new System.Drawing.Size(271, 24);
+            this.category_comboBox.Size = new System.Drawing.Size(304, 28);
             this.category_comboBox.TabIndex = 14;
             // 
             // difficulty_label
             // 
             this.difficulty_label.AutoSize = true;
-            this.difficulty_label.Location = new System.Drawing.Point(657, 111);
+            this.difficulty_label.Location = new System.Drawing.Point(739, 139);
             this.difficulty_label.Name = "difficulty_label";
-            this.difficulty_label.Size = new System.Drawing.Size(61, 17);
+            this.difficulty_label.Size = new System.Drawing.Size(69, 20);
             this.difficulty_label.TabIndex = 15;
             this.difficulty_label.Text = "Difficulty";
             // 
@@ -204,16 +211,17 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
             "Easy",
             "Medium",
             "Hard"});
-            this.difficulty_comboBox.Location = new System.Drawing.Point(670, 140);
+            this.difficulty_comboBox.Location = new System.Drawing.Point(754, 175);
+            this.difficulty_comboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.difficulty_comboBox.Name = "difficulty_comboBox";
-            this.difficulty_comboBox.Size = new System.Drawing.Size(271, 24);
+            this.difficulty_comboBox.Size = new System.Drawing.Size(304, 28);
             this.difficulty_comboBox.TabIndex = 16;
             // 
             // Question_Window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 450);
+            this.ClientSize = new System.Drawing.Size(1090, 562);
             this.Controls.Add(this.difficulty_comboBox);
             this.Controls.Add(this.difficulty_label);
             this.Controls.Add(this.category_comboBox);
@@ -231,6 +239,7 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
             this.Controls.Add(this.add_question_label);
             this.Controls.Add(this.clear_button);
             this.Controls.Add(this.add_button);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Question_Window";
             this.Text = "Question_Window";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Question_Window_FormClosing);
