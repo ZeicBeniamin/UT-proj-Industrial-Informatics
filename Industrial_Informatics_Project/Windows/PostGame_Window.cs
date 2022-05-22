@@ -80,5 +80,22 @@ namespace Industrial_Informatics_Project.Windows
         {
             application_controller.open_window("Main");
         }
+
+        private void buttonStats_Click(object sender, EventArgs e)
+        {
+            string game_name = application_controller.get_game_stats().game_name; 
+            switch (game_name)
+            {
+                case "Chimpaznee":
+                    application_controller.open_window("ChimpanzeeStatsWindow");
+                    break;
+                case "Quiz":
+                    application_controller.open_window("QuizStatsWindow");
+                    break;
+                case "Stroop":
+                    application_controller.open_window("StroopStatsWindow");
+                    break;
+            }
+        }
     }
 }

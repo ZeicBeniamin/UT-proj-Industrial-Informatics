@@ -117,6 +117,33 @@ namespace Industrial_Informatics_Project.Scripts.Games
                         exit_app = true;
                     }
                     break;
+                case "StroopStatsWindow":
+                    {
+                        exit_app = false;
+                        current_form.Dispose();
+                        current_form = new Stroop_Stats_Window(this);
+                        current_form.Show();
+                        exit_app = true;
+                    }
+                    break;
+                case "QuizStatsWindow":
+                    {
+                        exit_app = false;
+                        current_form.Dispose();
+                        current_form = new Quiz_Stats_Window(this);
+                        current_form.Show();
+                        exit_app = true;
+                    }
+                    break;
+                case "ChimpanzeeStatsWindow":
+                    {
+                        exit_app = false;
+                        current_form.Dispose();
+                        current_form = new Chimpanzee_Stats_Window(this);
+                        current_form.Show();
+                        exit_app = true;
+                    }
+                    break;
                 default: MessageBox.Show("Invalid windows: " + windows); break;
             }
         }
@@ -193,6 +220,11 @@ namespace Industrial_Informatics_Project.Scripts.Games
         public Game get_game_to_play()
         {
             return game_to_play;
+        }
+
+        public GameStats get_game_stats()
+        {
+            return game_stats;
         }
 
         /// <summary>

@@ -108,6 +108,7 @@ namespace Industrial_Informatics_Project.DataModel
                     user_id = stroopStats.user_id,
                     total_time = stroopStats.totalTime,
                     clicked_under_bar = stroopStats.clickedUnderBar,
+                    consecutive_strikes = stroopStats.consecutiveStrikes,
                     score = stroopStats.score,
                     date = stroopStats.date,
                     difficulty = stroopStats.difficulty 
@@ -305,6 +306,46 @@ namespace Industrial_Informatics_Project.DataModel
                 {
                     return false;
                 }
+            }
+        }
+
+        public static List<Stroop_Stats> getStroopStats(int user_id)
+        {
+            using (ProjectEntities entities = new ProjectEntities())
+            {
+
+                List<Stroop_Stats> stats = (from stat in entities.Stroop_Stats
+                                           select stat)
+               .OrderBy(stat => stat.date)
+               .ToList();
+
+                return stats;
+            }
+        }
+        public static List<Chimpanzee_Stats> getChimpanzeeStats(int user_id)
+        {
+            using (ProjectEntities entities = new ProjectEntities())
+            {
+
+                List<Chimpanzee_Stats> stats = (from stat in entities.Chimpanzee_Stats
+                                            select stat)
+               .OrderBy(stat => stat.date)
+               .ToList();
+
+                return stats;
+            }
+        }
+        public static List<Quiz_Stats> getQuizStats(int user_id)
+        {
+            using (ProjectEntities entities = new ProjectEntities())
+            {
+
+                List<Quiz_Stats> stats = (from stat in entities.Quiz_Stats
+                                                select stat)
+               .OrderBy(stat => stat.date)
+               .ToList();
+
+                return stats;
             }
         }
     }
