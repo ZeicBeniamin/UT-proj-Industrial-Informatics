@@ -31,7 +31,7 @@ namespace Industrial_Informatics_Project.Windows
         {
             this.components = new System.ComponentModel.Container();
             this.category_select_panel = new System.Windows.Forms.Panel();
-            this.category = new System.Windows.Forms.Label();
+            this.categories = new System.Windows.Forms.Label();
             this.quiz_panel = new System.Windows.Forms.Panel();
             this.category_label = new System.Windows.Forms.Label();
             this.timer_label = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@ namespace Industrial_Informatics_Project.Windows
             // category_select_panel
             // 
             this.category_select_panel.Controls.Add(this.category_buttons_panel);
-            this.category_select_panel.Controls.Add(this.category);
+            this.category_select_panel.Controls.Add(this.categories);
             this.category_select_panel.Location = new System.Drawing.Point(87, 65);
             this.category_select_panel.Name = "category_select_panel";
             this.category_select_panel.Size = new System.Drawing.Size(645, 314);
@@ -61,12 +61,12 @@ namespace Industrial_Informatics_Project.Windows
             // 
             // category
             // 
-            this.category.AutoSize = true;
-            this.category.Location = new System.Drawing.Point(45, 28);
-            this.category.Name = "category";
-            this.category.Size = new System.Drawing.Size(122, 17);
-            this.category.TabIndex = 0;
-            this.category.Text = "Select a category:";
+            this.categories.AutoSize = true;
+            this.categories.Location = new System.Drawing.Point(45, 28);
+            this.categories.Name = "category";
+            this.categories.Size = new System.Drawing.Size(122, 17);
+            this.categories.TabIndex = 0;
+            this.categories.Text = "Select a category:";
             // 
             // quiz_panel
             // 
@@ -217,7 +217,7 @@ namespace Industrial_Informatics_Project.Windows
         #endregion
 
         private System.Windows.Forms.Panel category_select_panel;
-        private System.Windows.Forms.Label category;
+        private System.Windows.Forms.Label categories;
         private System.Windows.Forms.Panel quiz_panel;
         private System.Windows.Forms.Panel question_panel;
         private System.Windows.Forms.Label question_text_label;

@@ -14,7 +14,7 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
         private QuizStats quiz_stats;
 
         // Questions from the database
-        private Question[] questions;
+        private List<Question> questions;
  
         // Timer of the quiz
         private int time;
@@ -49,13 +49,13 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
             quiz_stats = new QuizStats();
             quiz_stats.user_id = application_controller.get_user().id;
 
-            questions = new Question[5];
+            //questions = new Question[5];
 
-            questions[0] = new Question(0, 0, "text  mai lung la intrebare sa vad daca face wrap labelu la text daca e mai lunt aaaaaaaaaaaaaaaaaaaaaaaaaa", "d;g;h;i", "d", 1);
-            questions[1] = new Question(1, 0, "nu", "d;g;h;i", "g", 1);
-            questions[2] = new Question(2, 0, "poate", "d;g;h;i", "h", 1);
-            questions[3] = new Question(3, 0, "sepoate", "d;g;h;i", "i", 1);
-            questions[4] = new Question(4, 0, "sigur", "d;g;h;f", "f", 1);
+           // questions[0] = new Question(0, 0, "text  mai lung la intrebare sa vad daca face wrap labelu la text daca e mai lunt aaaaaaaaaaaaaaaaaaaaaaaaaa", "d;g;h;i", "d", 1);
+            //questions[1] = new Question(1, 0, "nu", "d;g;h;i", "g", 1);
+            //questions[2] = new Question(2, 0, "poate", "d;g;h;i", "h", 1);
+            //questions[3] = new Question(3, 0, "sepoate", "d;g;h;i", "i", 1);
+            //questions[4] = new Question(4, 0, "sigur", "d;g;h;f", "f", 1);
         }
 
         /// <summary>
@@ -95,8 +95,8 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
         private void get_categories()
         {
             // TODO: ACCESS THE DATABASE FOR THE CATEGORIES
-            string[] category = { "space", "math", "geography", "language", "computers", "systems", "programming", "programming", "programming", "programming", "programming", "programming", "programming", "programming", "darius" };
-            game_window.update_category(category);
+            List<String> categories = DataModel.DataHandler.getCategories();
+            game_window.update_category(categories);
         }
 
         /// <summary>
@@ -106,7 +106,8 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
         public void get_questions(string category)
         {
             // TODO: GET QUESTIONS FROM DATABASE
-            game_window.chage_panel(questions.Length);
+            questions = DataModel.DataHandler.get_questions(category);
+            game_window.chage_panel(questions.Count);
         }
 
         /// <summary>
@@ -157,7 +158,7 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
                 quiz_stats.incorrect_answers++;
             }
 
-            if(quiz_stats.correct_answers + quiz_stats.incorrect_answers == questions.Length)
+            if(quiz_stats.correct_answers + quiz_stats.incorrect_answers == questions.Count)
                 end_game();
         }
 

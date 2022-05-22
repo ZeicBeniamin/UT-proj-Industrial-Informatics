@@ -241,7 +241,43 @@ namespace Industrial_Informatics_Project.DataModel
             }
         }
 
+        public static int getIdOfCategory(string category)
+        {
+            using (ProjectEntities entities = new ProjectEntities())
+            {
+                var categ = entities.Categories.SingleOrDefault(c => (c.name == category));
 
+                if (categ != null)
+                {
+                    return categ.id;
+                }
+            }
+            return -1;
+        }
 
+        public static Scripts.Games.QuizScript.Question castQuestion(Question question)
+        {
+            return new Scripts.Games.QuizScript.Question(question.id, (int)question.category_id, question.question_text, question.question_options, question.question_answer, (int)question.difficulty);
+        }
+
+        public static List<Scripts.Games.QuizScript.Question> get_questions(string category)
+        {
+            // TODO: GET QUESTIONS FROM DATABASE
+            int category_id = getIdOfCategory(category);
+            using (ProjectEntities entities = new ProjectEntities())
+            {
+
+                IQueryable<Question> questions = entities.Questions.Where(q => q.category_id == category_id);
+
+                List<Scripts.Games.QuizScript.Question> questions_converted = new List<Scripts.Games.QuizScript.Question>();
+
+                foreach (Question question in questions)
+                {
+                    questions_converted.Add(castQuestion(question));
+                }
+
+                return questions_converted;
+            }
+        }
     }
 }

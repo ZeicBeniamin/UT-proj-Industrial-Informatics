@@ -51,15 +51,15 @@ namespace Industrial_Informatics_Project.Windows
         /// <summary>
         /// Create the buttons for the categories
         /// </summary>
-        /// <param name="category"></param>
-        public void update_category(string[] category)
+        /// <param name="categories"></param>
+        public void update_category(List<String> categories)
         {
-            for(int i=0;i<category.Length;i++)
+            for(int i=0;i<categories.Count;i++)
             {
                 Button button = new Button();
                 button.Height = 50;
                 button.Width = 100;
-                button.Text = category[i];
+                button.Text = categories[i];
                 button.Click += new EventHandler(category_button_click);
 
                 category_buttons_panel.Controls.Add(button);
