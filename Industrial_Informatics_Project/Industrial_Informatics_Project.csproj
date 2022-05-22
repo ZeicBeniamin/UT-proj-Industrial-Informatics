@@ -110,6 +110,12 @@
     <Compile Include="Windows\Admin Windows\Admin_Window.Designer.cs">
       <DependentUpon>Admin_Window.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Admin Windows\Category Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Admin Windows\Category Window.Designer.cs">
+      <DependentUpon>Category Window.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Admin Windows\Question_Window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </Compile>
     <EmbeddedResource Include="Windows\Admin Windows\Admin_Window.resx">
       <DependentUpon>Admin_Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Admin Windows\Category Window.resx">
+      <DependentUpon>Category Window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Admin Windows\Question_Window.resx">
       <DependentUpon>Question_Window.cs</DependentUpon>

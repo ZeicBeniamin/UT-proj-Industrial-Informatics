@@ -108,6 +108,15 @@ namespace Industrial_Informatics_Project.Scripts.Games
                         exit_app = true;
                     }
                     break;
+                case "Categories":
+                    {
+                        exit_app = false;
+                        current_form.Dispose();
+                        current_form = new Category_Window(this);
+                        current_form.Show();
+                        exit_app = true;
+                    }
+                    break;
                 default: MessageBox.Show("Invalid windows: " + windows); break;
             }
         }

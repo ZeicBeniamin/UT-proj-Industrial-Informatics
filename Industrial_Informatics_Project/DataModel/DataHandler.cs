@@ -279,5 +279,33 @@ namespace Industrial_Informatics_Project.DataModel
                 return questions_converted;
             }
         }
+
+        public static bool insertCategory(string name)
+        {
+            using (ProjectEntities entities = new ProjectEntities())
+            {
+
+                IList<Category> categories = (from categ in entities.Categories
+                                     select categ)
+                .ToList();
+                int last_id = categories.Count;
+
+                var new_category = new Category
+                {
+                    id = last_id,
+                    name = name
+                };
+
+                if (entities.Categories.Add(new_category) != null)
+                {
+                    entities.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

@@ -41,5 +41,10 @@ namespace Industrial_Informatics_Project.Windows
         {
             application_controller.open_window("Main");
         }
+
+        private void buttonAddCategory_Click(object sender, EventArgs e)
+        {
+            application_controller.open_window("Categories");
+        }
     }
 }
