@@ -16,5 +16,7 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
 
         // Average meadn of the solving time 
         public double avg_solve_time;
+
+        public int user_id;
     }
 }

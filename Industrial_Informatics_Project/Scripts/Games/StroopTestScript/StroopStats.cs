@@ -10,13 +10,16 @@ namespace Industrial_Informatics_Project.Scripts.Games.StroopTestScript
     {
         
         // total time spend on all tries
-        private double totalTime = 0;
+        public double totalTime = 0;
         // no of clicks before a certain time threshold 
-        private int clickedUnderBar = 0;
+        public int clickedUnderBar = 0;
         // max no of consetive strikes
-        private int consecutiveStrikes = 0;
+        public int consecutiveStrikes = 0;
         // no of correct clicks
-        private int score = 0;
+        public int score = 0;
+
+        public int user_id;
+
 
         public StroopStats(){
             game_name = "Stroop";

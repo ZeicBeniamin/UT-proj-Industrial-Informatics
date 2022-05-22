@@ -90,5 +90,113 @@ namespace Industrial_Informatics_Project.DataModel
             }
             return -1;
         }
+
+        public static bool insertStroopStats(Scripts.Games.StroopTestScript.StroopStats stroopStats)
+        {
+            using (ProjectEntities entities = new ProjectEntities())
+            {
+
+                IList<Stroop_Stats> stats = (from stat in entities.Stroop_Stats
+                                     select stat)
+                .ToList();
+                int last_id = stats.Count;
+
+                var new_stat = new Stroop_Stats
+
+                {
+                    id = last_id,
+                    user_id = stroopStats.user_id,
+                    total_time = stroopStats.totalTime,
+                    clicked_under_bar = stroopStats.clickedUnderBar,
+                    score = stroopStats.score,
+                    date = stroopStats.date,
+                    difficulty = stroopStats.difficulty 
+                    
+                };
+
+                if (entities.Stroop_Stats.Add(new_stat) != null)
+                {
+                    entities.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public static bool insertChimpanzeeStats(Scripts.Games.ChimpanzeeTestScript.ChimpanzeeStats chimpanzeeStats)
+        {
+            using (ProjectEntities entities = new ProjectEntities())
+            {
+
+                IList<Chimpanzee_Stats> stats = (from stat in entities.Chimpanzee_Stats
+                                             select stat)
+                .ToList();
+                int last_id = stats.Count;
+
+                var new_stat = new Chimpanzee_Stats
+
+                {
+                    id = last_id,
+                    user_id = chimpanzeeStats.user_id,
+                    game_time = chimpanzeeStats.game_time,
+                    avg_memory_time = chimpanzeeStats.avg_memory_time,
+                    avg_solve_time = chimpanzeeStats.avg_solve_time,
+                    date = chimpanzeeStats.date,
+                    difficulty = chimpanzeeStats.difficulty
+
+                };
+
+                if (entities.Chimpanzee_Stats.Add(new_stat) != null)
+                {
+                    entities.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public static bool insertQuizStats(Scripts.Games.QuizScript.QuizStats quizStats)
+        {
+            using (ProjectEntities entities = new ProjectEntities())
+            {
+
+                IList<Quiz_Stats> stats = (from stat in entities.Quiz_Stats
+                                             select stat)
+                .ToList();
+                int last_id = stats.Count;
+
+                var new_stat = new Quiz_Stats
+
+                {
+                    id = last_id,
+                    user_id = quizStats.user_id,
+                    corect_answers = quizStats.correct_answers,
+                    incorect_answers = quizStats.incorrect_answers,
+                    time_remaining = quizStats.minutes + quizStats.seconds/60,
+                    date = quizStats.date,
+                    difficulty = quizStats.difficulty
+
+                };
+
+                if (entities.Quiz_Stats.Add(new_stat) != null)
+                {
+                    entities.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+
+
     }
 }

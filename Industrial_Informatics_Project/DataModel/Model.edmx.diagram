@@ -6,6 +6,11 @@
     <edmx:Diagrams>
       <Diagram DiagramId="22dccae69f2845bf841cc586428a2c71" Name="Diagram1">
         <EntityTypeShape EntityType="II_ProjectModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="II_ProjectModel.Category" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="II_ProjectModel.Chimpanzee_Stats" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="II_ProjectModel.Question" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="II_ProjectModel.Quiz_Stats" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="II_ProjectModel.Stroop_Stats" Width="1.5" PointX="6.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

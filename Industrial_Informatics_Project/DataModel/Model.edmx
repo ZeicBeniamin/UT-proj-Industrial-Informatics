@@ -5,6 +5,61 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="II_ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Chimpanzee_Stats">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="game_time" Type="float" />
+          <Property Name="avg_memory_time" Type="float" />
+          <Property Name="avg_solve_time" Type="float" />
+          <Property Name="date" Type="datetime" />
+          <Property Name="difficulty" Type="int" />
+        </EntityType>
+        <EntityType Name="Questions">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="category_id" Type="int" />
+          <Property Name="question_text" Type="varchar" MaxLength="500" />
+          <Property Name="question_options" Type="varchar" MaxLength="1000" />
+          <Property Name="question_answer" Type="varchar" MaxLength="500" />
+          <Property Name="difficulty" Type="int" />
+        </EntityType>
+        <EntityType Name="Quiz_Stats">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="corect_answers" Type="int" />
+          <Property Name="incorect_answers" Type="int" />
+          <Property Name="time_remaining" Type="float" />
+          <Property Name="date" Type="datetime" />
+          <Property Name="difficulty" Type="int" />
+        </EntityType>
+        <EntityType Name="Stroop_Stats">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="total_time" Type="float" />
+          <Property Name="clicked_under_bar" Type="int" />
+          <Property Name="consecutive_strikes" Type="int" />
+          <Property Name="score" Type="int" />
+          <Property Name="date" Type="datetime" />
+          <Property Name="difficulty" Type="int" />
+        </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="user_id" />
@@ -16,6 +71,11 @@
           <Property Name="isAdmin" Type="int" />
         </EntityType>
         <EntityContainer Name="II_ProjectModelStoreContainer">
+          <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Chimpanzee_Stats" EntityType="Self.Chimpanzee_Stats" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Quiz_Stats" EntityType="Self.Quiz_Stats" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Stroop_Stats" EntityType="Self.Stroop_Stats" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -34,7 +94,67 @@
         </EntityType>
         <EntityContainer Name="ProjectEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Categories" EntityType="II_ProjectModel.Category" />
+          <EntitySet Name="Chimpanzee_Stats" EntityType="II_ProjectModel.Chimpanzee_Stats" />
+          <EntitySet Name="Questions" EntityType="II_ProjectModel.Question" />
+          <EntitySet Name="Quiz_Stats" EntityType="II_ProjectModel.Quiz_Stats" />
+          <EntitySet Name="Stroop_Stats" EntityType="II_ProjectModel.Stroop_Stats" />
         </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Chimpanzee_Stats">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="game_time" Type="Double" />
+          <Property Name="avg_memory_time" Type="Double" />
+          <Property Name="avg_solve_time" Type="Double" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+          <Property Name="difficulty" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="category_id" Type="Int32" />
+          <Property Name="question_text" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="question_options" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="question_answer" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="difficulty" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Quiz_Stats">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="corect_answers" Type="Int32" />
+          <Property Name="incorect_answers" Type="Int32" />
+          <Property Name="time_remaining" Type="Double" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+          <Property Name="difficulty" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Stroop_Stats">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="total_time" Type="Double" />
+          <Property Name="clicked_under_bar" Type="Int32" />
+          <Property Name="consecutive_strikes" Type="Int32" />
+          <Property Name="score" Type="Int32" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+          <Property Name="difficulty" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -49,6 +169,66 @@
                 <ScalarProperty Name="user_name" ColumnName="user_name" />
                 <ScalarProperty Name="user_id" ColumnName="user_id" />
                 <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="II_ProjectModel.Category">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Chimpanzee_Stats">
+            <EntityTypeMapping TypeName="II_ProjectModel.Chimpanzee_Stats">
+              <MappingFragment StoreEntitySet="Chimpanzee_Stats">
+                <ScalarProperty Name="difficulty" ColumnName="difficulty" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="avg_solve_time" ColumnName="avg_solve_time" />
+                <ScalarProperty Name="avg_memory_time" ColumnName="avg_memory_time" />
+                <ScalarProperty Name="game_time" ColumnName="game_time" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="II_ProjectModel.Question">
+              <MappingFragment StoreEntitySet="Questions">
+                <ScalarProperty Name="difficulty" ColumnName="difficulty" />
+                <ScalarProperty Name="question_answer" ColumnName="question_answer" />
+                <ScalarProperty Name="question_options" ColumnName="question_options" />
+                <ScalarProperty Name="question_text" ColumnName="question_text" />
+                <ScalarProperty Name="category_id" ColumnName="category_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Quiz_Stats">
+            <EntityTypeMapping TypeName="II_ProjectModel.Quiz_Stats">
+              <MappingFragment StoreEntitySet="Quiz_Stats">
+                <ScalarProperty Name="difficulty" ColumnName="difficulty" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="time_remaining" ColumnName="time_remaining" />
+                <ScalarProperty Name="incorect_answers" ColumnName="incorect_answers" />
+                <ScalarProperty Name="corect_answers" ColumnName="corect_answers" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stroop_Stats">
+            <EntityTypeMapping TypeName="II_ProjectModel.Stroop_Stats">
+              <MappingFragment StoreEntitySet="Stroop_Stats">
+                <ScalarProperty Name="difficulty" ColumnName="difficulty" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="score" ColumnName="score" />
+                <ScalarProperty Name="consecutive_strikes" ColumnName="consecutive_strikes" />
+                <ScalarProperty Name="clicked_under_bar" ColumnName="clicked_under_bar" />
+                <ScalarProperty Name="total_time" ColumnName="total_time" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

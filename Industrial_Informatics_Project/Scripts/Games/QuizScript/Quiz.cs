@@ -47,6 +47,7 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
             check_difficulty(difficulty);
 
             quiz_stats = new QuizStats();
+            quiz_stats.user_id = application_controller.get_user().id;
 
             questions = new Question[5];
 
@@ -173,6 +174,8 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
             quiz_stats.seconds = game_window.seconds;
 
             application_controller.set_game_stats(quiz_stats);
+
+            DataModel.DataHandler.insertQuizStats(quiz_stats);
 
             application_controller.open_window("PostGame");
         }

@@ -26,5 +26,10 @@ namespace Industrial_Informatics_Project.DataModel
         }
     
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Chimpanzee_Stats> Chimpanzee_Stats { get; set; }
+        public virtual DbSet<Question> Questions { get; set; }
+        public virtual DbSet<Quiz_Stats> Quiz_Stats { get; set; }
+        public virtual DbSet<Stroop_Stats> Stroop_Stats { get; set; }
     }
 }

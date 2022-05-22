@@ -14,6 +14,8 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
         // Number of incorect answers
         public int incorrect_answers;
 
+        public int user_id;
+
         // Time remaining
         public int minutes;
         public int seconds;

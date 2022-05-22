@@ -12,15 +12,9 @@ namespace Industrial_Informatics_Project.DataModel
     using System;
     using System.Collections.Generic;
     
-    public partial class Stroop_Stats
+    public partial class Category
     {
         public int id { get; set; }
-        public Nullable<int> user_id { get; set; }
-        public Nullable<double> total_time { get; set; }
-        public Nullable<int> clicked_under_bar { get; set; }
-        public Nullable<int> consecutive_strikes { get; set; }
-        public Nullable<int> score { get; set; }
-        public Nullable<System.DateTime> date { get; set; }
-        public Nullable<int> difficulty { get; set; }
+        public string name { get; set; }
     }
 }
