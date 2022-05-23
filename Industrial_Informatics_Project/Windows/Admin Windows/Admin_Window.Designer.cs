@@ -36,10 +36,10 @@ namespace Industrial_Informatics_Project.Windows
             // 
             // addquestion_button
             // 
-            this.addquestion_button.Location = new System.Drawing.Point(719, 579);
-            this.addquestion_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.addquestion_button.Location = new System.Drawing.Point(479, 376);
+            this.addquestion_button.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.addquestion_button.Name = "addquestion_button";
-            this.addquestion_button.Size = new System.Drawing.Size(124, 51);
+            this.addquestion_button.Size = new System.Drawing.Size(83, 33);
             this.addquestion_button.TabIndex = 0;
             this.addquestion_button.Text = "Add Question";
             this.addquestion_button.UseVisualStyleBackColor = true;
@@ -47,19 +47,20 @@ namespace Industrial_Informatics_Project.Windows
             // 
             // users_button
             // 
-            this.users_button.Location = new System.Drawing.Point(43, 579);
-            this.users_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.users_button.Location = new System.Drawing.Point(29, 376);
+            this.users_button.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.users_button.Name = "users_button";
-            this.users_button.Size = new System.Drawing.Size(124, 51);
+            this.users_button.Size = new System.Drawing.Size(83, 33);
             this.users_button.TabIndex = 1;
             this.users_button.Text = "Users";
             this.users_button.UseVisualStyleBackColor = true;
             // 
             // buttonAddCategory
             // 
-            this.buttonAddCategory.Location = new System.Drawing.Point(719, 471);
+            this.buttonAddCategory.Location = new System.Drawing.Point(479, 306);
+            this.buttonAddCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAddCategory.Name = "buttonAddCategory";
-            this.buttonAddCategory.Size = new System.Drawing.Size(124, 56);
+            this.buttonAddCategory.Size = new System.Drawing.Size(83, 36);
             this.buttonAddCategory.TabIndex = 2;
             this.buttonAddCategory.Text = "Add Category";
             this.buttonAddCategory.UseVisualStyleBackColor = true;
@@ -67,16 +68,17 @@ namespace Industrial_Informatics_Project.Windows
             // 
             // Admin_Window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 668);
+            this.ClientSize = new System.Drawing.Size(608, 434);
             this.Controls.Add(this.buttonAddCategory);
             this.Controls.Add(this.users_button);
             this.Controls.Add(this.addquestion_button);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Admin_Window";
             this.Text = "Admin_Window";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Admin_Window_FormClosing);
+            this.Load += new System.EventHandler(this.Admin_Window_Load);
             this.ResumeLayout(false);
 
         }

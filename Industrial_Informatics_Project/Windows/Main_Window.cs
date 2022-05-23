@@ -149,5 +149,10 @@ namespace Industrial_Informatics_Project
         {
             application_controller.open_window("Questions");
         }
+
+        private void Main_Window_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

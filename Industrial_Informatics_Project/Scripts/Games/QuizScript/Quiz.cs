@@ -69,22 +69,22 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
                 case 0:
                     {
                         number_questions = 10;
-                        time = 15;
+                        time = 10;
                     }; break;
                 case 1:
                     {
-                        number_questions = 15;
-                        time = 15;
+                        number_questions = 10;
+                        time = 10;
                     }; break;
                 case 2:
                     {
-                        number_questions  = 20;
-                        time = 18;
+                        number_questions  = 10;
+                        time = 10;
                     }; break;
                 default:
                     {
                         number_questions = 10;
-                        time = 15;
+                        time = 10;
                     }; break;
             }
         }
@@ -106,8 +106,23 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
         public void get_questions(string category)
         {
             // TODO: GET QUESTIONS FROM DATABASE
-            questions = DataModel.DataHandler.get_questions(category);
-            game_window.chage_panel(questions.Count);
+            application_controller.get_game_to_play().get_difficulty();
+            questions = DataModel.DataHandler.get_questions(category, application_controller.get_game_to_play().get_difficulty());
+            var rnd = new Random(DateTime.Now.Millisecond);
+            List<Scripts.Games.QuizScript.Question> random_questions = new List<Scripts.Games.QuizScript.Question>();
+
+            int[] already_selected = new int[questions.Count];
+            while (random_questions.Count != number_questions)
+            {
+                int idx = rnd.Next(0, questions.Count - 1);
+                if (already_selected[idx] == 0)
+                {
+                    already_selected[idx] = 1;
+                    random_questions.Add(questions[idx]);
+                }
+            }
+
+            game_window.change_panel(random_questions.Count);
         }
 
         /// <summary>
