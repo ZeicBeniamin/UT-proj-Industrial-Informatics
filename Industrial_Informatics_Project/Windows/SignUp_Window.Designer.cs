@@ -44,17 +44,17 @@ namespace Industrial_Informatics_Project.Windows
             // 
             // create_button
             // 
-            this.create_button.Location = new System.Drawing.Point(142, 357);
+            this.create_button.Location = new System.Drawing.Point(139, 296);
             this.create_button.Name = "create_button";
             this.create_button.Size = new System.Drawing.Size(136, 48);
             this.create_button.TabIndex = 0;
-            this.create_button.Text = "Create account";
+            this.create_button.Text = "Sign up";
             this.create_button.UseVisualStyleBackColor = true;
             this.create_button.Click += new System.EventHandler(this.create_button_Click);
             // 
             // main_button
             // 
-            this.main_button.Location = new System.Drawing.Point(142, 411);
+            this.main_button.Location = new System.Drawing.Point(139, 367);
             this.main_button.Name = "main_button";
             this.main_button.Size = new System.Drawing.Size(136, 48);
             this.main_button.TabIndex = 1;
@@ -64,7 +64,7 @@ namespace Industrial_Informatics_Project.Windows
             // 
             // password_textbox
             // 
-            this.password_textbox.Location = new System.Drawing.Point(110, 175);
+            this.password_textbox.Location = new System.Drawing.Point(107, 170);
             this.password_textbox.Name = "password_textbox";
             this.password_textbox.PasswordChar = '*';
             this.password_textbox.Size = new System.Drawing.Size(206, 22);
@@ -72,21 +72,21 @@ namespace Industrial_Informatics_Project.Windows
             // 
             // email_textbox
             // 
-            this.email_textbox.Location = new System.Drawing.Point(110, 114);
+            this.email_textbox.Location = new System.Drawing.Point(107, 109);
             this.email_textbox.Name = "email_textbox";
             this.email_textbox.Size = new System.Drawing.Size(206, 22);
             this.email_textbox.TabIndex = 3;
             // 
             // username_textbox
             // 
-            this.username_textbox.Location = new System.Drawing.Point(110, 51);
+            this.username_textbox.Location = new System.Drawing.Point(107, 46);
             this.username_textbox.Name = "username_textbox";
             this.username_textbox.Size = new System.Drawing.Size(206, 22);
             this.username_textbox.TabIndex = 4;
             // 
             // repassword_textbox
             // 
-            this.repassword_textbox.Location = new System.Drawing.Point(110, 240);
+            this.repassword_textbox.Location = new System.Drawing.Point(107, 235);
             this.repassword_textbox.Name = "repassword_textbox";
             this.repassword_textbox.PasswordChar = '*';
             this.repassword_textbox.Size = new System.Drawing.Size(206, 22);
@@ -95,7 +95,7 @@ namespace Industrial_Informatics_Project.Windows
             // label_username
             // 
             this.label_username.AutoSize = true;
-            this.label_username.Location = new System.Drawing.Point(107, 31);
+            this.label_username.Location = new System.Drawing.Point(104, 26);
             this.label_username.Name = "label_username";
             this.label_username.Size = new System.Drawing.Size(73, 17);
             this.label_username.TabIndex = 6;
@@ -104,7 +104,7 @@ namespace Industrial_Informatics_Project.Windows
             // label_email
             // 
             this.label_email.AutoSize = true;
-            this.label_email.Location = new System.Drawing.Point(107, 94);
+            this.label_email.Location = new System.Drawing.Point(104, 89);
             this.label_email.Name = "label_email";
             this.label_email.Size = new System.Drawing.Size(42, 17);
             this.label_email.TabIndex = 7;
@@ -113,7 +113,7 @@ namespace Industrial_Informatics_Project.Windows
             // laebl_password
             // 
             this.laebl_password.AutoSize = true;
-            this.laebl_password.Location = new System.Drawing.Point(110, 152);
+            this.laebl_password.Location = new System.Drawing.Point(107, 147);
             this.laebl_password.Name = "laebl_password";
             this.laebl_password.Size = new System.Drawing.Size(69, 17);
             this.laebl_password.TabIndex = 8;
@@ -122,7 +122,7 @@ namespace Industrial_Informatics_Project.Windows
             // label_repassowrd
             // 
             this.label_repassowrd.AutoSize = true;
-            this.label_repassowrd.Location = new System.Drawing.Point(110, 220);
+            this.label_repassowrd.Location = new System.Drawing.Point(107, 215);
             this.label_repassowrd.Name = "label_repassowrd";
             this.label_repassowrd.Size = new System.Drawing.Size(126, 17);
             this.label_repassowrd.TabIndex = 9;
@@ -132,7 +132,7 @@ namespace Industrial_Informatics_Project.Windows
             // 
             this.label_error.AutoSize = true;
             this.label_error.ForeColor = System.Drawing.Color.Red;
-            this.label_error.Location = new System.Drawing.Point(113, 292);
+            this.label_error.Location = new System.Drawing.Point(112, 268);
             this.label_error.Name = "label_error";
             this.label_error.Size = new System.Drawing.Size(0, 17);
             this.label_error.TabIndex = 10;
@@ -141,7 +141,7 @@ namespace Industrial_Informatics_Project.Windows
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 478);
+            this.ClientSize = new System.Drawing.Size(420, 445);
             this.Controls.Add(this.label_error);
             this.Controls.Add(this.label_repassowrd);
             this.Controls.Add(this.laebl_password);

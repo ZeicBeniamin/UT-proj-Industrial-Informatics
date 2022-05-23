@@ -116,6 +116,10 @@ namespace Industrial_Informatics_Project
                 stroop_button.Enabled = false;
                 quiz_button.Enabled = false;
 
+                button_chimp_stats.Enabled = false;
+                button_quiz_stas.Enabled = false;
+                button_stroop_stats.Enabled = false;
+
                 logout_button.Visible = false;
             }
         }
@@ -149,10 +153,19 @@ namespace Industrial_Informatics_Project
         {
             application_controller.open_window("Questions");
         }
-
-        private void Main_Window_Load(object sender, EventArgs e)
+        private void button_chimp_stats_Click(object sender, EventArgs e)
         {
+            application_controller.open_window("ChimpanzeeStatsWindow");
+        }
 
+        private void button_quiz_stas_Click(object sender, EventArgs e)
+        {
+            application_controller.open_window("QuizStatsWindow");
+        }
+
+        private void button_stroop_stats_Click(object sender, EventArgs e)
+        {
+            application_controller.open_window("StroopStatsWindow");
         }
     }
 }
