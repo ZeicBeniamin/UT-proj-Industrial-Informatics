@@ -12,12 +12,12 @@ namespace Industrial_Informatics_Project.DataModel
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class sysdiagram
     {
-        public int user_id { get; set; }
-        public string user_name { get; set; }
-        public string password { get; set; }
-        public string email { get; set; }
-        public Nullable<int> isAdmin { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

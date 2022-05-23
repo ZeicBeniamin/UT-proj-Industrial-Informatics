@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Laurus\OneDrive - Technical University of Cluj-Napoca\Desktop\Project II\UT-proj-Industrial-Informatics\Industrial_Informatics_Project\DataModel\Model.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Proiecte\Poli\AN III\Semestrul II\II\Proiect\Industrial_Informatics_Project\Industrial_Informatics_Project\DataModel\Model.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

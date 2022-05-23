@@ -142,10 +142,10 @@ namespace Industrial_Informatics_Project.DataModel
                 {
                     id = last_id,
                     user_id = chimpanzeeStats.user_id,
-                    game_time = chimpanzeeStats.game_time,
-                    avg_memory_time = chimpanzeeStats.avg_memory_time,
-                    avg_solve_time = chimpanzeeStats.avg_solve_time,
-                    date = chimpanzeeStats.date,
+                    game_time = chimpanzeeStats.game_time/1000,
+                    avg_memory_time = chimpanzeeStats.avg_memory_time/1000,
+                    avg_solve_time = chimpanzeeStats.avg_solve_time/1000,
+                    date = chimpanzeeStats.date.Day.ToString() + "." + chimpanzeeStats.date.Month.ToString() + "." +chimpanzeeStats.date.Year.ToString(),
                     difficulty = chimpanzeeStats.difficulty
 
                 };
@@ -179,8 +179,8 @@ namespace Industrial_Informatics_Project.DataModel
                     user_id = quizStats.user_id,
                     corect_answers = quizStats.correct_answers,
                     incorect_answers = quizStats.incorrect_answers,
-                    time_remaining = quizStats.minutes + quizStats.seconds/60,
-                    date = quizStats.date,
+                    time_remaining = quizStats.minutes.ToString() + ":" + quizStats.seconds.ToString(),
+                    date = quizStats.date.Day.ToString() + "." + quizStats.date.Month.ToString() + "." + quizStats.date.Year.ToString(),
                     difficulty = quizStats.difficulty
 
                 };

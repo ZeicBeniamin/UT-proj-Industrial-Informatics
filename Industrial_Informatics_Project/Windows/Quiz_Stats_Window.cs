@@ -63,7 +63,9 @@ namespace Industrial_Informatics_Project.Windows
         private static double getBestTimeRemained(int user_id)
         {
             List<Quiz_Stats> stats = DataHandler.getQuizStats(user_id);
-            return (double)stats.Max(obj => obj.time_remaining);
+            string time = stats.Max(obj => obj.time_remaining);
+            double timeDouble = double.Parse(time.Split(':')[0]) + double.Parse(time.Split(':')[1]);
+            return timeDouble;
         }
 
 

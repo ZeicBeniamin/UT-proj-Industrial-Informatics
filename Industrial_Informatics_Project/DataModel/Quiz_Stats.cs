@@ -18,8 +18,8 @@ namespace Industrial_Informatics_Project.DataModel
         public Nullable<int> user_id { get; set; }
         public Nullable<int> corect_answers { get; set; }
         public Nullable<int> incorect_answers { get; set; }
-        public Nullable<double> time_remaining { get; set; }
-        public Nullable<System.DateTime> date { get; set; }
+        public string time_remaining { get; set; }
+        public string date { get; set; }
         public Nullable<int> difficulty { get; set; }
     }
 }

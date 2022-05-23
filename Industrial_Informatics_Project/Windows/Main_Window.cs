@@ -112,6 +112,10 @@ namespace Industrial_Informatics_Project
                 register_button.Visible = true;
                 login_button.Visible = true;
 
+                chimpanzee_button.Enabled = false;
+                stroop_button.Enabled = false;
+                quiz_button.Enabled = false;
+
                 logout_button.Visible = false;
             }
         }
@@ -121,7 +125,7 @@ namespace Industrial_Informatics_Project
         /// </summary>
         private void update_for_user()
         {
-            usermane_label.Text = application_controller.get_user().username;
+            usermane_label.Text = "Welcome, " + application_controller.get_user().username;
         }
 
         /// <summary>

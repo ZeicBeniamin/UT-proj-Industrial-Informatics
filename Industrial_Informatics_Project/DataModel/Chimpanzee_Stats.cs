@@ -19,7 +19,7 @@ namespace Industrial_Informatics_Project.DataModel
         public Nullable<double> game_time { get; set; }
         public Nullable<double> avg_memory_time { get; set; }
         public Nullable<double> avg_solve_time { get; set; }
-        public Nullable<System.DateTime> date { get; set; }
+        public string date { get; set; }
         public Nullable<int> difficulty { get; set; }
     }
 }

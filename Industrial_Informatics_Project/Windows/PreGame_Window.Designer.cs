@@ -34,6 +34,7 @@ namespace Industrial_Informatics_Project.Windows
             this.medium_button = new System.Windows.Forms.Button();
             this.hard_button = new System.Windows.Forms.Button();
             this.difficulty_label = new System.Windows.Forms.Label();
+            this.stats_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // start_button
@@ -85,11 +86,22 @@ namespace Industrial_Informatics_Project.Windows
             this.difficulty_label.TabIndex = 4;
             this.difficulty_label.Text = "Selected difficulty: Easy";
             // 
+            // stats_button
+            // 
+            this.stats_button.Location = new System.Drawing.Point(489, 332);
+            this.stats_button.Name = "stats_button";
+            this.stats_button.Size = new System.Drawing.Size(105, 45);
+            this.stats_button.TabIndex = 5;
+            this.stats_button.Text = "Stats";
+            this.stats_button.UseVisualStyleBackColor = true;
+            this.stats_button.Click += new System.EventHandler(this.stats_button_Click);
+            // 
             // PreGame_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 476);
+            this.Controls.Add(this.stats_button);
             this.Controls.Add(this.difficulty_label);
             this.Controls.Add(this.hard_button);
             this.Controls.Add(this.medium_button);
@@ -110,5 +122,6 @@ namespace Industrial_Informatics_Project.Windows
         private System.Windows.Forms.Button medium_button;
         private System.Windows.Forms.Button hard_button;
         private System.Windows.Forms.Label difficulty_label;
+        private System.Windows.Forms.Button stats_button;
     }
 }
