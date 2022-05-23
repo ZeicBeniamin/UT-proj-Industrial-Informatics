@@ -38,6 +38,9 @@ namespace Industrial_Informatics_Project
             this.quiz_button = new System.Windows.Forms.Button();
             this.stroop_button = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button_chimp_stats = new System.Windows.Forms.Button();
+            this.button_quiz_stas = new System.Windows.Forms.Button();
+            this.button_stroop_stats = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // chimpanzee_button
@@ -119,11 +122,44 @@ namespace Industrial_Informatics_Project
             this.richTextBox1.TabIndex = 9;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
+            // button_chimp_stats
+            // 
+            this.button_chimp_stats.Location = new System.Drawing.Point(33, 454);
+            this.button_chimp_stats.Name = "button_chimp_stats";
+            this.button_chimp_stats.Size = new System.Drawing.Size(139, 41);
+            this.button_chimp_stats.TabIndex = 10;
+            this.button_chimp_stats.Text = "Chimpanzee Stats";
+            this.button_chimp_stats.UseVisualStyleBackColor = true;
+            this.button_chimp_stats.Click += new System.EventHandler(this.button_chimp_stats_Click);
+            // 
+            // button_quiz_stas
+            // 
+            this.button_quiz_stas.Location = new System.Drawing.Point(194, 454);
+            this.button_quiz_stas.Name = "button_quiz_stas";
+            this.button_quiz_stas.Size = new System.Drawing.Size(139, 41);
+            this.button_quiz_stas.TabIndex = 11;
+            this.button_quiz_stas.Text = "Quiz Stats";
+            this.button_quiz_stas.UseVisualStyleBackColor = true;
+            this.button_quiz_stas.Click += new System.EventHandler(this.button_quiz_stas_Click);
+            // 
+            // button_stroop_stats
+            // 
+            this.button_stroop_stats.Location = new System.Drawing.Point(353, 454);
+            this.button_stroop_stats.Name = "button_stroop_stats";
+            this.button_stroop_stats.Size = new System.Drawing.Size(139, 41);
+            this.button_stroop_stats.TabIndex = 12;
+            this.button_stroop_stats.Text = "Stroop Stats";
+            this.button_stroop_stats.UseVisualStyleBackColor = true;
+            this.button_stroop_stats.Click += new System.EventHandler(this.button_stroop_stats_Click);
+            // 
             // Main_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 450);
+            this.ClientSize = new System.Drawing.Size(525, 523);
+            this.Controls.Add(this.button_stroop_stats);
+            this.Controls.Add(this.button_quiz_stas);
+            this.Controls.Add(this.button_chimp_stats);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.quiz_button);
             this.Controls.Add(this.usermane_label);
@@ -151,6 +187,9 @@ namespace Industrial_Informatics_Project
         private System.Windows.Forms.Button quiz_button;
         private System.Windows.Forms.Button stroop_button;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button button_chimp_stats;
+        private System.Windows.Forms.Button button_quiz_stas;
+        private System.Windows.Forms.Button button_stroop_stats;
     }
 }
 
