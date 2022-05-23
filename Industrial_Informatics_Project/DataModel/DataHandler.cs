@@ -218,11 +218,20 @@ namespace Industrial_Informatics_Project.DataModel
                 IList<Question> questions = (from que in entities.Questions
                                      select que)
                 .ToList();
-                int last_id = questions.Count;
+                int last_id = 0;
+                try
+                {
+                    entities.Questions.Max(q => q.id);
+                    last_id = entities.Questions.Max(q => q.id);
+                } catch (Exception exc)
+                {
+                    last_id = 0;
+                }
+
 
                 var new_question = new Question
                 {
-                    id = last_id,
+                    id = last_id + 1,
                     category_id = question.category_id,
                     question_text = question.question_text,
                     question_options = question.question_options,
@@ -258,10 +267,14 @@ namespace Industrial_Informatics_Project.DataModel
 
         public static Scripts.Games.QuizScript.Question castQuestion(Question question)
         {
+            Console.Out.WriteLine(question.question_text);
+            Console.Out.WriteLine(question.id);
+            Console.Out.WriteLine(question.difficulty);
+
             return new Scripts.Games.QuizScript.Question(question.id, (int)question.category_id, question.question_text, question.question_options, question.question_answer, (int)question.difficulty);
         }
 
-        public static List<Scripts.Games.QuizScript.Question> get_questions(string category)
+        public static List<Scripts.Games.QuizScript.Question> get_questions(string category, int difficulty)
         {
             // TODO: GET QUESTIONS FROM DATABASE
             int category_id = getIdOfCategory(category);
@@ -274,7 +287,10 @@ namespace Industrial_Informatics_Project.DataModel
 
                 foreach (Question question in questions)
                 {
-                    questions_converted.Add(castQuestion(question));
+                    /*if (question.difficulty == difficulty) {
+                    */    questions_converted.Add(castQuestion(question));
+                    
+                    
                 }
 
                 return questions_converted;
@@ -289,11 +305,21 @@ namespace Industrial_Informatics_Project.DataModel
                 IList<Category> categories = (from categ in entities.Categories
                                      select categ)
                 .ToList();
-                int last_id = categories.Count;
+                
+                int last_id = 0;
+                try
+                {
+                    entities.Categories.Max(c => c.id);
+                    last_id = entities.Categories.Max(c => c.id);
+                }
+                catch (Exception exc)
+                {
+                    last_id = 0;
+                }
 
                 var new_category = new Category
                 {
-                    id = last_id,
+                    id = last_id + 1,
                     name = name
                 };
 
@@ -307,6 +333,22 @@ namespace Industrial_Informatics_Project.DataModel
                     return false;
                 }
             }
+        }
+
+        public static bool deleteCategory(string categoryName)
+        {
+            bool result = false;
+
+            using (ProjectEntities entity = new ProjectEntities())
+            {
+                Category category = entity.Categories.SingleOrDefault(c => c.name == categoryName);
+
+                entity.Categories.Remove(category);
+                entity.SaveChanges();
+                result = true;
+            }
+
+            return result;
         }
 
         public static List<Stroop_Stats> getStroopStats(int user_id)

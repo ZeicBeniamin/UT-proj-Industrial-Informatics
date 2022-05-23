@@ -88,7 +88,7 @@ namespace Industrial_Informatics_Project.Windows
         /// Change from the category selection to the actual quiz game 
         /// </summary>
         /// <param name="number_qusetion"></param>
-        public void chage_panel(int number_qusetion)
+        public void change_panel(int number_qusetion)
         {
             quiz_panel.Visible = true;
             category_select_panel.Visible = false;
@@ -236,6 +236,11 @@ namespace Industrial_Informatics_Project.Windows
                 timer_label.Text += "0" + seconds.ToString();
             else
                 timer_label.Text += seconds.ToString();
+        }
+
+        private void quiz_panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
