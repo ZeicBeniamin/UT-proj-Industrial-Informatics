@@ -154,7 +154,7 @@ namespace Industrial_Informatics_Project.Windows
             this.Controls.Add(this.main_button);
             this.Controls.Add(this.create_button);
             this.Name = "SignUp_Window";
-            this.Text = "SignUp_Window";
+            this.Text = "SignUp Window";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SignUp_Window_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

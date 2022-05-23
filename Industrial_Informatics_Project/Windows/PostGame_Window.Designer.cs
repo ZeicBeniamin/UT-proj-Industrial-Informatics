@@ -36,10 +36,9 @@ namespace Industrial_Informatics_Project.Windows
             // 
             // back_button
             // 
-            this.back_button.Location = new System.Drawing.Point(498, 414);
-            this.back_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.back_button.Location = new System.Drawing.Point(358, 208);
             this.back_button.Name = "back_button";
-            this.back_button.Size = new System.Drawing.Size(107, 59);
+            this.back_button.Size = new System.Drawing.Size(95, 47);
             this.back_button.TabIndex = 0;
             this.back_button.Text = "Back";
             this.back_button.UseVisualStyleBackColor = true;
@@ -48,17 +47,18 @@ namespace Industrial_Informatics_Project.Windows
             // stats_label
             // 
             this.stats_label.AutoSize = true;
-            this.stats_label.Location = new System.Drawing.Point(68, 85);
+            this.stats_label.Location = new System.Drawing.Point(24, 28);
             this.stats_label.Name = "stats_label";
-            this.stats_label.Size = new System.Drawing.Size(47, 20);
+            this.stats_label.Size = new System.Drawing.Size(40, 17);
             this.stats_label.TabIndex = 1;
             this.stats_label.Text = "Stats";
             // 
             // buttonStats
             // 
-            this.buttonStats.Location = new System.Drawing.Point(351, 414);
+            this.buttonStats.Location = new System.Drawing.Point(358, 28);
+            this.buttonStats.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonStats.Name = "buttonStats";
-            this.buttonStats.Size = new System.Drawing.Size(108, 59);
+            this.buttonStats.Size = new System.Drawing.Size(96, 47);
             this.buttonStats.TabIndex = 2;
             this.buttonStats.Text = "Show Stats";
             this.buttonStats.UseVisualStyleBackColor = true;
@@ -66,15 +66,14 @@ namespace Industrial_Informatics_Project.Windows
             // 
             // PostGame_Window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 528);
+            this.ClientSize = new System.Drawing.Size(477, 275);
             this.Controls.Add(this.buttonStats);
             this.Controls.Add(this.stats_label);
             this.Controls.Add(this.back_button);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "PostGame_Window";
-            this.Text = "PostGame_Window";
+            this.Text = "PostGame Window";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PostGame_Window_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

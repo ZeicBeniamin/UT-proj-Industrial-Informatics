@@ -47,17 +47,18 @@
             // 
             this.coloredWordLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
             this.coloredWordLeft.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.coloredWordLeft.Location = new System.Drawing.Point(214, 128);
+            this.coloredWordLeft.Location = new System.Drawing.Point(190, 102);
             this.coloredWordLeft.Name = "coloredWordLeft";
-            this.coloredWordLeft.Size = new System.Drawing.Size(277, 71);
+            this.coloredWordLeft.Size = new System.Drawing.Size(246, 57);
             this.coloredWordLeft.TabIndex = 0;
             this.coloredWordLeft.Text = "BLACK";
             // 
             // blackButton
             // 
-            this.blackButton.Location = new System.Drawing.Point(120, 294);
+            this.blackButton.Location = new System.Drawing.Point(107, 235);
+            this.blackButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.blackButton.Name = "blackButton";
-            this.blackButton.Size = new System.Drawing.Size(180, 80);
+            this.blackButton.Size = new System.Drawing.Size(160, 64);
             this.blackButton.TabIndex = 2;
             this.blackButton.Text = "BLACK";
             this.blackButton.UseVisualStyleBackColor = true;
@@ -65,9 +66,10 @@
             // 
             // yellowButton
             // 
-            this.yellowButton.Location = new System.Drawing.Point(307, 294);
+            this.yellowButton.Location = new System.Drawing.Point(273, 235);
+            this.yellowButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.yellowButton.Name = "yellowButton";
-            this.yellowButton.Size = new System.Drawing.Size(180, 80);
+            this.yellowButton.Size = new System.Drawing.Size(160, 64);
             this.yellowButton.TabIndex = 3;
             this.yellowButton.Text = "YELLOW";
             this.yellowButton.UseVisualStyleBackColor = true;
@@ -75,9 +77,10 @@
             // 
             // greenButton
             // 
-            this.greenButton.Location = new System.Drawing.Point(493, 294);
+            this.greenButton.Location = new System.Drawing.Point(438, 235);
+            this.greenButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.greenButton.Name = "greenButton";
-            this.greenButton.Size = new System.Drawing.Size(180, 80);
+            this.greenButton.Size = new System.Drawing.Size(160, 64);
             this.greenButton.TabIndex = 4;
             this.greenButton.Text = "GREEN";
             this.greenButton.UseVisualStyleBackColor = true;
@@ -85,9 +88,10 @@
             // 
             // redButton
             // 
-            this.redButton.Location = new System.Drawing.Point(120, 380);
+            this.redButton.Location = new System.Drawing.Point(107, 304);
+            this.redButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.redButton.Name = "redButton";
-            this.redButton.Size = new System.Drawing.Size(180, 80);
+            this.redButton.Size = new System.Drawing.Size(160, 64);
             this.redButton.TabIndex = 5;
             this.redButton.Text = "RED";
             this.redButton.UseVisualStyleBackColor = true;
@@ -95,9 +99,10 @@
             // 
             // blueButton
             // 
-            this.blueButton.Location = new System.Drawing.Point(306, 380);
+            this.blueButton.Location = new System.Drawing.Point(272, 304);
+            this.blueButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.blueButton.Name = "blueButton";
-            this.blueButton.Size = new System.Drawing.Size(180, 80);
+            this.blueButton.Size = new System.Drawing.Size(160, 64);
             this.blueButton.TabIndex = 6;
             this.blueButton.Text = "BLUE";
             this.blueButton.UseVisualStyleBackColor = true;
@@ -105,9 +110,10 @@
             // 
             // pinkButton
             // 
-            this.pinkButton.Location = new System.Drawing.Point(493, 380);
+            this.pinkButton.Location = new System.Drawing.Point(438, 304);
+            this.pinkButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pinkButton.Name = "pinkButton";
-            this.pinkButton.Size = new System.Drawing.Size(180, 80);
+            this.pinkButton.Size = new System.Drawing.Size(160, 64);
             this.pinkButton.TabIndex = 7;
             this.pinkButton.Text = "PINK";
             this.pinkButton.UseVisualStyleBackColor = true;
@@ -117,9 +123,10 @@
             // 
             this.timeBar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.timeBar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.timeBar.Location = new System.Drawing.Point(55, 28);
+            this.timeBar.Location = new System.Drawing.Point(49, 22);
+            this.timeBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.timeBar.Name = "timeBar";
-            this.timeBar.Size = new System.Drawing.Size(707, 23);
+            this.timeBar.Size = new System.Drawing.Size(628, 18);
             this.timeBar.TabIndex = 8;
             // 
             // timerMoveLabel
@@ -130,9 +137,9 @@
             // 
             this.coloredWordRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
             this.coloredWordRight.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.coloredWordRight.Location = new System.Drawing.Point(513, 128);
+            this.coloredWordRight.Location = new System.Drawing.Point(456, 102);
             this.coloredWordRight.Name = "coloredWordRight";
-            this.coloredWordRight.Size = new System.Drawing.Size(277, 71);
+            this.coloredWordRight.Size = new System.Drawing.Size(246, 57);
             this.coloredWordRight.TabIndex = 9;
             this.coloredWordRight.Text = "BLACK";
             // 
@@ -141,19 +148,19 @@
             this.labelRight_Left.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelRight_Left.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRight_Left.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelRight_Left.Location = new System.Drawing.Point(773, 292);
+            this.labelRight_Left.Location = new System.Drawing.Point(687, 234);
             this.labelRight_Left.Name = "labelRight_Left";
-            this.labelRight_Left.Size = new System.Drawing.Size(206, 62);
+            this.labelRight_Left.Size = new System.Drawing.Size(183, 50);
             this.labelRight_Left.TabIndex = 10;
             this.labelRight_Left.Text = "LEFT";
             this.labelRight_Left.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StroopTest_Window_Level1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1045, 505);
+            this.ClientSize = new System.Drawing.Size(929, 404);
             this.Controls.Add(this.labelRight_Left);
             this.Controls.Add(this.coloredWordRight);
             this.Controls.Add(this.timeBar);
@@ -164,8 +171,9 @@
             this.Controls.Add(this.yellowButton);
             this.Controls.Add(this.blackButton);
             this.Controls.Add(this.coloredWordLeft);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StroopTest_Window_Level1";
-            this.Text = "StroopTest_Window";
+            this.Text = "StroopTest Window";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StroopTest_Window_FormClosing);
             this.ResumeLayout(false);
 

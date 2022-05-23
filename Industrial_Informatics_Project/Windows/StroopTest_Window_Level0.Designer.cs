@@ -45,17 +45,18 @@
             // 
             this.coloredWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 55F);
             this.coloredWord.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.coloredWord.Location = new System.Drawing.Point(272, 67);
+            this.coloredWord.Location = new System.Drawing.Point(242, 54);
             this.coloredWord.Name = "coloredWord";
-            this.coloredWord.Size = new System.Drawing.Size(419, 147);
+            this.coloredWord.Size = new System.Drawing.Size(372, 118);
             this.coloredWord.TabIndex = 0;
             this.coloredWord.Text = "BLACK";
             // 
             // blackButton
             // 
-            this.blackButton.Location = new System.Drawing.Point(195, 229);
+            this.blackButton.Location = new System.Drawing.Point(173, 183);
+            this.blackButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.blackButton.Name = "blackButton";
-            this.blackButton.Size = new System.Drawing.Size(180, 80);
+            this.blackButton.Size = new System.Drawing.Size(160, 64);
             this.blackButton.TabIndex = 2;
             this.blackButton.Text = "BLACK";
             this.blackButton.UseVisualStyleBackColor = true;
@@ -63,9 +64,10 @@
             // 
             // yellowButton
             // 
-            this.yellowButton.Location = new System.Drawing.Point(382, 229);
+            this.yellowButton.Location = new System.Drawing.Point(340, 183);
+            this.yellowButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.yellowButton.Name = "yellowButton";
-            this.yellowButton.Size = new System.Drawing.Size(180, 80);
+            this.yellowButton.Size = new System.Drawing.Size(160, 64);
             this.yellowButton.TabIndex = 3;
             this.yellowButton.Text = "YELLOW";
             this.yellowButton.UseVisualStyleBackColor = true;
@@ -73,9 +75,10 @@
             // 
             // greenButton
             // 
-            this.greenButton.Location = new System.Drawing.Point(568, 229);
+            this.greenButton.Location = new System.Drawing.Point(505, 183);
+            this.greenButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.greenButton.Name = "greenButton";
-            this.greenButton.Size = new System.Drawing.Size(180, 80);
+            this.greenButton.Size = new System.Drawing.Size(160, 64);
             this.greenButton.TabIndex = 4;
             this.greenButton.Text = "GREEN";
             this.greenButton.UseVisualStyleBackColor = true;
@@ -83,9 +86,10 @@
             // 
             // redButton
             // 
-            this.redButton.Location = new System.Drawing.Point(195, 315);
+            this.redButton.Location = new System.Drawing.Point(173, 252);
+            this.redButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.redButton.Name = "redButton";
-            this.redButton.Size = new System.Drawing.Size(180, 80);
+            this.redButton.Size = new System.Drawing.Size(160, 64);
             this.redButton.TabIndex = 5;
             this.redButton.Text = "RED";
             this.redButton.UseVisualStyleBackColor = true;
@@ -93,9 +97,10 @@
             // 
             // blueButton
             // 
-            this.blueButton.Location = new System.Drawing.Point(381, 315);
+            this.blueButton.Location = new System.Drawing.Point(339, 252);
+            this.blueButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.blueButton.Name = "blueButton";
-            this.blueButton.Size = new System.Drawing.Size(180, 80);
+            this.blueButton.Size = new System.Drawing.Size(160, 64);
             this.blueButton.TabIndex = 6;
             this.blueButton.Text = "BLUE";
             this.blueButton.UseVisualStyleBackColor = true;
@@ -103,9 +108,10 @@
             // 
             // pinkButton
             // 
-            this.pinkButton.Location = new System.Drawing.Point(568, 315);
+            this.pinkButton.Location = new System.Drawing.Point(505, 252);
+            this.pinkButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pinkButton.Name = "pinkButton";
-            this.pinkButton.Size = new System.Drawing.Size(180, 80);
+            this.pinkButton.Size = new System.Drawing.Size(160, 64);
             this.pinkButton.TabIndex = 7;
             this.pinkButton.Text = "PINK";
             this.pinkButton.UseVisualStyleBackColor = true;
@@ -115,20 +121,21 @@
             // 
             this.timeBar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.timeBar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.timeBar.Location = new System.Drawing.Point(120, 23);
+            this.timeBar.Location = new System.Drawing.Point(107, 18);
+            this.timeBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.timeBar.Name = "timeBar";
-            this.timeBar.Size = new System.Drawing.Size(707, 23);
+            this.timeBar.Size = new System.Drawing.Size(628, 18);
             this.timeBar.TabIndex = 8;
             // 
             // timerMoveLabel
             // 
             this.timerMoveLabel.Interval = 10;
             // 
-            // StroopTest_Window
+            // StroopTest_Window_Level0
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(951, 455);
+            this.ClientSize = new System.Drawing.Size(845, 364);
             this.Controls.Add(this.timeBar);
             this.Controls.Add(this.pinkButton);
             this.Controls.Add(this.blueButton);
@@ -137,8 +144,9 @@
             this.Controls.Add(this.yellowButton);
             this.Controls.Add(this.blackButton);
             this.Controls.Add(this.coloredWord);
-            this.Name = "StroopTest_Window";
-            this.Text = "StroopTest_Window";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "StroopTest_Window_Level0";
+            this.Text = "StroopTest Window";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StroopTest_Window_FormClosing);
             this.ResumeLayout(false);
 

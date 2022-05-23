@@ -105,7 +105,6 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
         /// <param name="category">Category selected</param>
         public void get_questions(string category)
         {
-            // TODO: GET QUESTIONS FROM DATABASE
             application_controller.get_game_to_play().get_difficulty();
             questions = DataModel.DataHandler.get_questions(category, application_controller.get_game_to_play().get_difficulty());
             var rnd = new Random(DateTime.Now.Millisecond);
@@ -173,7 +172,7 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
                 quiz_stats.incorrect_answers++;
             }
 
-            if(quiz_stats.correct_answers + quiz_stats.incorrect_answers == questions.Count)
+            if(quiz_stats.correct_answers + quiz_stats.incorrect_answers == number_questions)
                 end_game();
         }
 

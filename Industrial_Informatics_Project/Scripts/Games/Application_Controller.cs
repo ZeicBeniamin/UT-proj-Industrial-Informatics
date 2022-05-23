@@ -181,8 +181,8 @@ namespace Industrial_Informatics_Project.Scripts.Games
                         current_form.Show();
                         exit_app = true;
                     }
-		break;
-		case "Quiz":
+		            break;
+		        case "Quiz":
                     {
                         exit_app = false;
                         current_form.Dispose();

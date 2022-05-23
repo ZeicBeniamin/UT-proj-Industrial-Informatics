@@ -67,5 +67,10 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
         private void listBoxCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
+
+        private void Category_Window_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            application_controller.open_window("Admin");
+        }
     }
 }

@@ -54,28 +54,27 @@ namespace Industrial_Informatics_Project.Windows
             // 
             this.category_select_panel.Controls.Add(this.category_buttons_panel);
             this.category_select_panel.Controls.Add(this.categories);
-            this.category_select_panel.Location = new System.Drawing.Point(65, 53);
-            this.category_select_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.category_select_panel.Location = new System.Drawing.Point(87, 65);
+            this.category_select_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.category_select_panel.Name = "category_select_panel";
-            this.category_select_panel.Size = new System.Drawing.Size(484, 255);
+            this.category_select_panel.Size = new System.Drawing.Size(797, 314);
             this.category_select_panel.TabIndex = 0;
             // 
             // category_buttons_panel
             // 
             this.category_buttons_panel.AutoScroll = true;
-            this.category_buttons_panel.Location = new System.Drawing.Point(20, 63);
-            this.category_buttons_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.category_buttons_panel.Location = new System.Drawing.Point(27, 78);
+            this.category_buttons_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.category_buttons_panel.Name = "category_buttons_panel";
-            this.category_buttons_panel.Size = new System.Drawing.Size(449, 166);
+            this.category_buttons_panel.Size = new System.Drawing.Size(745, 204);
             this.category_buttons_panel.TabIndex = 2;
             // 
             // categories
             // 
             this.categories.AutoSize = true;
-            this.categories.Location = new System.Drawing.Point(34, 23);
-            this.categories.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.categories.Location = new System.Drawing.Point(45, 28);
             this.categories.Name = "categories";
-            this.categories.Size = new System.Drawing.Size(93, 13);
+            this.categories.Size = new System.Drawing.Size(122, 17);
             this.categories.TabIndex = 0;
             this.categories.Text = "Select a category:";
             // 
@@ -85,20 +84,20 @@ namespace Industrial_Informatics_Project.Windows
             this.quiz_panel.Controls.Add(this.question_panel);
             this.quiz_panel.Controls.Add(this.timer_label);
             this.quiz_panel.Controls.Add(this.category_label);
-            this.quiz_panel.Location = new System.Drawing.Point(9, 10);
-            this.quiz_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.quiz_panel.Location = new System.Drawing.Point(12, 13);
+            this.quiz_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.quiz_panel.Name = "quiz_panel";
-            this.quiz_panel.Size = new System.Drawing.Size(582, 346);
+            this.quiz_panel.Size = new System.Drawing.Size(921, 426);
             this.quiz_panel.TabIndex = 1;
             this.quiz_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.quiz_panel_Paint);
             // 
             // qusetion_selection_panel
             // 
             this.qusetion_selection_panel.AutoScroll = true;
-            this.qusetion_selection_panel.Location = new System.Drawing.Point(22, 81);
-            this.qusetion_selection_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.qusetion_selection_panel.Location = new System.Drawing.Point(29, 100);
+            this.qusetion_selection_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qusetion_selection_panel.Name = "qusetion_selection_panel";
-            this.qusetion_selection_panel.Size = new System.Drawing.Size(97, 242);
+            this.qusetion_selection_panel.Size = new System.Drawing.Size(129, 298);
             this.qusetion_selection_panel.TabIndex = 3;
             // 
             // question_panel
@@ -109,18 +108,18 @@ namespace Industrial_Informatics_Project.Windows
             this.question_panel.Controls.Add(this.option_two);
             this.question_panel.Controls.Add(this.option_one);
             this.question_panel.Controls.Add(this.question_text_label);
-            this.question_panel.Location = new System.Drawing.Point(148, 81);
-            this.question_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.question_panel.Location = new System.Drawing.Point(197, 100);
+            this.question_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.question_panel.Name = "question_panel";
-            this.question_panel.Size = new System.Drawing.Size(413, 242);
+            this.question_panel.Size = new System.Drawing.Size(695, 298);
             this.question_panel.TabIndex = 2;
             // 
             // answer_button
             // 
-            this.answer_button.Location = new System.Drawing.Point(309, 198);
-            this.answer_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.answer_button.Location = new System.Drawing.Point(573, 247);
+            this.answer_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.answer_button.Name = "answer_button";
-            this.answer_button.Size = new System.Drawing.Size(69, 28);
+            this.answer_button.Size = new System.Drawing.Size(92, 34);
             this.answer_button.TabIndex = 5;
             this.answer_button.Text = "Lock";
             this.answer_button.UseVisualStyleBackColor = true;
@@ -129,10 +128,10 @@ namespace Industrial_Informatics_Project.Windows
             // option_four
             // 
             this.option_four.AutoSize = true;
-            this.option_four.Location = new System.Drawing.Point(44, 150);
-            this.option_four.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.option_four.Location = new System.Drawing.Point(59, 185);
+            this.option_four.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.option_four.Name = "option_four";
-            this.option_four.Size = new System.Drawing.Size(85, 17);
+            this.option_four.Size = new System.Drawing.Size(110, 21);
             this.option_four.TabIndex = 4;
             this.option_four.TabStop = true;
             this.option_four.Text = "radioButton4";
@@ -141,10 +140,10 @@ namespace Industrial_Informatics_Project.Windows
             // option_three
             // 
             this.option_three.AutoSize = true;
-            this.option_three.Location = new System.Drawing.Point(44, 128);
-            this.option_three.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.option_three.Location = new System.Drawing.Point(59, 158);
+            this.option_three.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.option_three.Name = "option_three";
-            this.option_three.Size = new System.Drawing.Size(85, 17);
+            this.option_three.Size = new System.Drawing.Size(110, 21);
             this.option_three.TabIndex = 3;
             this.option_three.TabStop = true;
             this.option_three.Text = "radioButton3";
@@ -153,10 +152,10 @@ namespace Industrial_Informatics_Project.Windows
             // option_two
             // 
             this.option_two.AutoSize = true;
-            this.option_two.Location = new System.Drawing.Point(44, 105);
-            this.option_two.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.option_two.Location = new System.Drawing.Point(59, 129);
+            this.option_two.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.option_two.Name = "option_two";
-            this.option_two.Size = new System.Drawing.Size(85, 17);
+            this.option_two.Size = new System.Drawing.Size(110, 21);
             this.option_two.TabIndex = 2;
             this.option_two.TabStop = true;
             this.option_two.Text = "radioButton2";
@@ -165,10 +164,10 @@ namespace Industrial_Informatics_Project.Windows
             // option_one
             // 
             this.option_one.AutoSize = true;
-            this.option_one.Location = new System.Drawing.Point(44, 82);
-            this.option_one.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.option_one.Location = new System.Drawing.Point(59, 101);
+            this.option_one.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.option_one.Name = "option_one";
-            this.option_one.Size = new System.Drawing.Size(85, 17);
+            this.option_one.Size = new System.Drawing.Size(110, 21);
             this.option_one.TabIndex = 1;
             this.option_one.TabStop = true;
             this.option_one.Text = "radioButton1";
@@ -177,30 +176,29 @@ namespace Industrial_Informatics_Project.Windows
             // question_text_label
             // 
             this.question_text_label.AutoSize = true;
-            this.question_text_label.Location = new System.Drawing.Point(28, 25);
-            this.question_text_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.question_text_label.Location = new System.Drawing.Point(37, 31);
             this.question_text_label.Name = "question_text_label";
-            this.question_text_label.Size = new System.Drawing.Size(49, 13);
+            this.question_text_label.Size = new System.Drawing.Size(65, 17);
             this.question_text_label.TabIndex = 0;
             this.question_text_label.Text = "Question";
             // 
             // timer_label
             // 
             this.timer_label.AutoSize = true;
-            this.timer_label.Location = new System.Drawing.Point(496, 20);
-            this.timer_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.timer_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timer_label.Location = new System.Drawing.Point(808, 34);
             this.timer_label.Name = "timer_label";
-            this.timer_label.Size = new System.Drawing.Size(29, 13);
+            this.timer_label.Size = new System.Drawing.Size(54, 25);
             this.timer_label.TabIndex = 1;
             this.timer_label.Text = "timer";
             // 
             // category_label
             // 
             this.category_label.AutoSize = true;
-            this.category_label.Location = new System.Drawing.Point(20, 20);
-            this.category_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.category_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.category_label.Location = new System.Drawing.Point(59, 34);
             this.category_label.Name = "category_label";
-            this.category_label.Size = new System.Drawing.Size(38, 13);
+            this.category_label.Size = new System.Drawing.Size(69, 25);
             this.category_label.TabIndex = 0;
             this.category_label.Text = "Space";
             // 
@@ -211,14 +209,14 @@ namespace Industrial_Informatics_Project.Windows
             // 
             // Quiz_Window
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(945, 450);
             this.Controls.Add(this.quiz_panel);
             this.Controls.Add(this.category_select_panel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Quiz_Window";
-            this.Text = "Quiz_Window";
+            this.Text = "Quiz Window";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Quiz_Window_FormClosing);
             this.category_select_panel.ResumeLayout(false);
             this.category_select_panel.PerformLayout();

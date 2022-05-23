@@ -113,7 +113,7 @@ namespace Industrial_Informatics_Project.Windows
             this.Controls.Add(this.create_button);
             this.Controls.Add(this.login_button);
             this.Name = "Login_Window";
-            this.Text = "Login_Window";
+            this.Text = "Login Window";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_Window_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
