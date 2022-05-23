@@ -54,5 +54,18 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
             addToCategories();
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(listBoxCategories.SelectedIndex != -1) // No item selected if idx == -1
+            {
+                DataModel.DataHandler.deleteCategory(listBoxCategories.Text);
+            }
+            addToCategories();
+        }
+
+        private void listBoxCategories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

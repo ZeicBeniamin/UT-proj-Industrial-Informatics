@@ -58,7 +58,7 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
                 var checkedButton = Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
 
                 switch (((RadioButton)checkedButton).Name)
-                {
+                {   
                     case "option_one_radio": answer = option_one_richTextBox.Text.Trim(); break;
                     case "option_two_radio": answer = option_two_richTextBox.Text.Trim(); break;
                     case "option_three_radio": answer = option_three_richTextBox.Text.Trim(); break;

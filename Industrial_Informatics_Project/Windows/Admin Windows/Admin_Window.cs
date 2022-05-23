@@ -39,6 +39,7 @@ namespace Industrial_Informatics_Project.Windows
         /// <param name="e"></param>
         private void Admin_Window_FormClosing(object sender, FormClosingEventArgs e)
         {
+            /*application_controller.exit_application();*/
             application_controller.open_window("Main");
         }
 
