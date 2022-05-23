@@ -144,6 +144,15 @@ namespace Industrial_Informatics_Project.Scripts.Games
                         exit_app = true;
                     }
                     break;
+                case "UsersOverview":
+                    {
+                        exit_app = false;
+                        current_form.Dispose();
+                        current_form = new User_Overview(this);
+                        current_form.Show();
+                        exit_app=true;
+                    }
+                    break;
                 default: MessageBox.Show("Invalid windows: " + windows); break;
             }
         }

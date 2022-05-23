@@ -75,6 +75,17 @@
     <Compile Include="DataModel\Chimpanzee_Stats.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="II_ProjectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>II_ProjectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin Windows\User_Overview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Admin Windows\User_Overview.Designer.cs">
+      <DependentUpon>User_Overview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Quiz_Stats_Window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +234,9 @@
     <Compile Include="Windows\StroopTest_Window_Level0.Designer.cs">
       <DependentUpon>StroopTest_Window_Level0.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Windows\Admin Windows\User_Overview.resx">
+      <DependentUpon>User_Overview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\Quiz_Stats_Window.resx">
       <DependentUpon>Quiz_Stats_Window.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +304,17 @@
     <None Include="App.Config" />
     <None Include="DataModel\Model.edmx.diagram">
       <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="II_ProjectDataSet.xsc">
+      <DependentUpon>II_ProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="II_ProjectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>II_ProjectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="II_ProjectDataSet.xss">
+      <DependentUpon>II_ProjectDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

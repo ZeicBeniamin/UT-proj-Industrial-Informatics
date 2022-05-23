@@ -103,7 +103,10 @@ namespace Industrial_Informatics_Project.Windows
             if (DataModel.DataHandler.isUser(userman_textbox.Text, password_textbox.Text))
                 return true;
             else
+            {
+                label_error.Text = "User/password combination not found.";
                 return false;
+            }
         }
     }
 }

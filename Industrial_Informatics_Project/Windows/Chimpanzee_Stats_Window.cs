@@ -51,19 +51,28 @@ namespace Industrial_Informatics_Project.Windows
         private static double getBestGameTime(int user_id)
         {
             List<Chimpanzee_Stats> stats = DataHandler.getChimpanzeeStats(user_id);
-            return (double)stats.Max(obj => obj.game_time);
+            if (stats.Count > 0)
+                return (double)stats.Max(obj => obj.game_time);
+            else
+                return -1;
         }
 
         private static double getBestAvgMemory(int user_id)
         {
             List<Chimpanzee_Stats> stats = DataHandler.getChimpanzeeStats(user_id);
-            return (double)stats.Max(obj => obj.avg_memory_time);
+            if (stats.Count > 0)
+                return (double)stats.Max(obj => obj.avg_memory_time);
+            else
+                return -1;
         }
 
         private static double getBestAvgSolve(int user_id)
         {
             List<Chimpanzee_Stats> stats = DataHandler.getChimpanzeeStats(user_id);
-            return (double)stats.Max(obj => obj.avg_solve_time);
+            if (stats.Count > 0)
+                return (double)stats.Max(obj => obj.avg_solve_time);
+            else
+                return -1;
         }
 
 

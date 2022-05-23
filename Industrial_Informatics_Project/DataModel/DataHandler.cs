@@ -210,6 +210,18 @@ namespace Industrial_Informatics_Project.DataModel
             }
         }
 
+        public static List<User> getUsers()
+        {
+            using (ProjectEntities entities = new ProjectEntities())
+            {
+
+                List<User> users = entities.Users.ToList();
+                
+                return users;
+            }
+        }
+
+
         public static bool insertQuestion(Scripts.Games.QuizScript.Question question)
         {
             using (ProjectEntities entities = new ProjectEntities())
@@ -358,6 +370,7 @@ namespace Industrial_Informatics_Project.DataModel
 
                 List<Stroop_Stats> stats = (from stat in entities.Stroop_Stats
                                            select stat)
+               .Where(stat => stat.user_id == user_id)
                .OrderBy(stat => stat.date)
                .ToList();
 
@@ -371,6 +384,7 @@ namespace Industrial_Informatics_Project.DataModel
 
                 List<Chimpanzee_Stats> stats = (from stat in entities.Chimpanzee_Stats
                                             select stat)
+               .Where(stat => stat.user_id == user_id)
                .OrderBy(stat => stat.date)
                .ToList();
 
@@ -384,6 +398,7 @@ namespace Industrial_Informatics_Project.DataModel
 
                 List<Quiz_Stats> stats = (from stat in entities.Quiz_Stats
                                                 select stat)
+               .Where(stat => stat.user_id == user_id)
                .OrderBy(stat => stat.date)
                .ToList();
 

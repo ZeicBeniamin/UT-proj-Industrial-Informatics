@@ -47,5 +47,10 @@ namespace Industrial_Informatics_Project.Windows
         {
             application_controller.open_window("Categories");
         }
+
+        private void users_button_Click(object sender, EventArgs e)
+        {
+            application_controller.open_window("UsersOverview");
+        }
     }
 }

@@ -52,25 +52,37 @@ namespace Industrial_Informatics_Project.Windows
         private static int getBestScore(int user_id)
         {
             List<Stroop_Stats> stroop_Stats = DataHandler.getStroopStats(user_id);
-            return (int)stroop_Stats.Max(obj => obj.score);
+            if (stroop_Stats.Count > 0)
+                return (int)stroop_Stats.Max(obj => obj.score);
+            else
+                return -1;
         }
 
         private static double getBestTime(int user_id)
         {
             List<Stroop_Stats> stroop_Stats = DataHandler.getStroopStats(user_id);
-            return (double)stroop_Stats.Max(obj => obj.total_time);
+            if (stroop_Stats.Count > 0)
+                return (double)stroop_Stats.Max(obj => obj.total_time);
+            else
+                return -1;
         }
 
         private static int getBestConsecutiveStrikes(int user_id)
         {
             List<Stroop_Stats> stroop_Stats = DataHandler.getStroopStats(user_id);
-            return (int)stroop_Stats.Max(obj => obj.consecutive_strikes);
+            if (stroop_Stats.Count > 0)
+                return (int)stroop_Stats.Max(obj => obj.consecutive_strikes);
+            else
+                return -1;
         }
 
         private static int getBestClickedUnderBar(int user_id)
         {
             List<Stroop_Stats> stroop_Stats = DataHandler.getStroopStats(user_id);
-            return (int)stroop_Stats.Max(obj => obj.clicked_under_bar);
+            if (stroop_Stats.Count > 0)
+                return (int)stroop_Stats.Max(obj => obj.clicked_under_bar);
+            else
+                return -1;
         }
 
         private SeriesCollection createSeriesScores(string title,int user_id)
