@@ -267,7 +267,7 @@ namespace Industrial_Informatics_Project.DataModel
         {
             using (ProjectEntities entities = new ProjectEntities())
             {
-                var categ = entities.Categories.SingleOrDefault(c => (c.name == category));
+                var categ = entities.Categories.FirstOrDefault(c => (c.name == category));
 
                 if (categ != null)
                 {
@@ -299,9 +299,10 @@ namespace Industrial_Informatics_Project.DataModel
 
                 foreach (Question question in questions)
                 {
-                    /*if (question.difficulty == difficulty) {
-                    */    questions_converted.Add(castQuestion(question));
-                    
+                    if (question.difficulty == difficulty)
+                    {
+                        questions_converted.Add(castQuestion(question));
+                    }
                     
                 }
 

@@ -22,6 +22,9 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
         // Number of questions 
         private int number_questions;
 
+        // Required number of questions
+        private int required_number_questions;
+
         // Game window of the game
         private Quiz_Window game_window;
 
@@ -68,22 +71,22 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
             {
                 case 0:
                     {
-                        number_questions = 10;
+                        required_number_questions = 15;
                         time = 10;
                     }; break;
                 case 1:
                     {
-                        number_questions = 10;
+                        required_number_questions = 15;
                         time = 10;
                     }; break;
                 case 2:
                     {
-                        number_questions  = 10;
+                        required_number_questions = 15;
                         time = 10;
                     }; break;
                 default:
                     {
-                        number_questions = 10;
+                        required_number_questions = 15;
                         time = 10;
                     }; break;
             }
@@ -110,10 +113,18 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
             var rnd = new Random(DateTime.Now.Millisecond);
             List<Scripts.Games.QuizScript.Question> random_questions = new List<Scripts.Games.QuizScript.Question>();
 
+            number_questions = required_number_questions;
+
+            if (questions.Count < number_questions)
+            { 
+                number_questions = questions.Count;
+                Console.WriteLine("We only have " + number_questions + " questions.");
+            }
+
             int[] already_selected = new int[questions.Count];
             while (random_questions.Count != number_questions)
             {
-                int idx = rnd.Next(0, questions.Count - 1);
+                int idx = rnd.Next(0, questions.Count);
                 if (already_selected[idx] == 0)
                 {
                     already_selected[idx] = 1;
@@ -121,7 +132,14 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
                 }
             }
 
-            game_window.change_panel(random_questions.Count);
+            if (number_questions != 0)
+            {
+                game_window.change_panel(random_questions.Count);
+            }
+            else
+            {
+                return;
+            }
         }
 
         /// <summary>

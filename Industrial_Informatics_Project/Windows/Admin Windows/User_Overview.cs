@@ -29,9 +29,15 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
 
         }
 
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void onUserOverviewClosed(object sender, FormClosedEventArgs e)
+        {
+            application_controller.open_window("Admin");
         }
     }
 }

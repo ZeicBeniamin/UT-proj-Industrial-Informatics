@@ -112,6 +112,7 @@
             this.Controls.Add(this.usersGridView);
             this.Name = "User_Overview";
             this.Text = "User_Overview";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.onUserOverviewClosed);
             this.Load += new System.EventHandler(this.User_Overview_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usersGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
