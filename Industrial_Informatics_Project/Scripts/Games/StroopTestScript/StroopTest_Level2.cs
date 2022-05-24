@@ -217,7 +217,8 @@ namespace Industrial_Informatics_Project.Scripts.Games.StroopTestScript
             game_window.Dispose();
 
             application_controller.set_game_stats(game_stats);
-
+            
+            game_stats.difficulty = 2;
             DataModel.DataHandler.insertStroopStats(game_stats);
 
             application_controller.open_window("PostGame");

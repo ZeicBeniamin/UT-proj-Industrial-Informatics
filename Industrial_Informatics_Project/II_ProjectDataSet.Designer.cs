@@ -3743,7 +3743,7 @@ namespace Industrial_Informatics_Project.II_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DARIUSMAN;Initial Catalog=II_Project;Integrated Security=True";
+            this._connection.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=II_Project;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4102,7 +4102,7 @@ SELECT id, user_id, game_time, avg_memory_time, avg_solve_time, date, difficulty
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DARIUSMAN;Initial Catalog=II_Project;Integrated Security=True";
+            this._connection.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=II_Project;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4595,7 +4595,7 @@ SELECT id, category_id, question_text, question_options, question_answer, diffic
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DARIUSMAN;Initial Catalog=II_Project;Integrated Security=True";
+            this._connection.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=II_Project;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5067,7 +5067,7 @@ SELECT id, user_id, corect_answers, incorect_answers, time_remaining, date, diff
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DARIUSMAN;Initial Catalog=II_Project;Integrated Security=True";
+            this._connection.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=II_Project;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5574,7 +5574,7 @@ SELECT id, user_id, total_time, clicked_under_bar, consecutive_strikes, score, d
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DARIUSMAN;Initial Catalog=II_Project;Integrated Security=True";
+            this._connection.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=II_Project;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6105,7 +6105,7 @@ SELECT user_id, user_name, password, email, isAdmin FROM Users WHERE (user_id = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DARIUSMAN;Initial Catalog=II_Project;Integrated Security=True";
+            this._connection.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=II_Project;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

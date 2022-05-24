@@ -354,7 +354,7 @@ namespace Industrial_Informatics_Project.DataModel
 
             using (ProjectEntities entity = new ProjectEntities())
             {
-                Category category = entity.Categories.SingleOrDefault(c => c.name == categoryName);
+                Category category = entity.Categories.FirstOrDefault(c => c.name == categoryName);
 
                 entity.Categories.Remove(category);
                 entity.SaveChanges();

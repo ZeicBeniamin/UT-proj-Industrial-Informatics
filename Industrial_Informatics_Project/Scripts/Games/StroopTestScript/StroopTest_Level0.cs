@@ -163,6 +163,7 @@ namespace Industrial_Informatics_Project.Scripts.Games.StroopTestScript
 
             application_controller.set_game_stats(game_stats);
 
+            game_stats.difficulty = 0;
             DataModel.DataHandler.insertStroopStats(game_stats);
 
             application_controller.open_window("PostGame");

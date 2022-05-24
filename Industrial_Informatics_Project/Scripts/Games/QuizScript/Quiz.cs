@@ -19,11 +19,15 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
         // Timer of the quiz
         private int time;
 
-        // Number of questions 
-        private int number_questions;
-
         // Required number of questions
         private int required_number_questions;
+
+        // Actual number of questions
+        // If there are not enough questions from a given category, 
+        // required_number_questions will be less than number_questions
+        // Good for errors that might appear when inserting new 
+        // categories.
+        private int number_questions;
 
         // Game window of the game
         private Quiz_Window game_window;
@@ -71,22 +75,22 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
             {
                 case 0:
                     {
-                        required_number_questions = 15;
+                        required_number_questions = 10;
                         time = 10;
                     }; break;
                 case 1:
                     {
-                        required_number_questions = 15;
+                        required_number_questions = 10;
                         time = 10;
                     }; break;
                 case 2:
                     {
-                        required_number_questions = 15;
+                        required_number_questions = 10;
                         time = 10;
                     }; break;
                 default:
                     {
-                        required_number_questions = 15;
+                        required_number_questions = 10;
                         time = 10;
                     }; break;
             }
@@ -108,20 +112,31 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
         /// <param name="category">Category selected</param>
         public void get_questions(string category)
         {
-            application_controller.get_game_to_play().get_difficulty();
-            questions = DataModel.DataHandler.get_questions(category, application_controller.get_game_to_play().get_difficulty());
+            // Initialize a random generator for random question order
             var rnd = new Random(DateTime.Now.Millisecond);
+
+            // Get questions from db, having a certain difficulty
+            questions = DataModel.DataHandler.get_questions(category, application_controller.get_game_to_play().get_difficulty());
+            
+            //  Initialize empty list of questions in random order
             List<Scripts.Games.QuizScript.Question> random_questions = new List<Scripts.Games.QuizScript.Question>();
 
+            // Set the number of questions to match the required number of questions
+            // If we do not have enough questions in the DB, the number will be lowered
             number_questions = required_number_questions;
 
+            // Check if we have enough questions in the db. Otherwise, lower the number
+            // of questions.
             if (questions.Count < number_questions)
             { 
                 number_questions = questions.Count;
                 Console.WriteLine("We only have " + number_questions + " questions.");
             }
 
+            // Maintain a marking of the questions already selected - prevents selecting a question two times
             int[] already_selected = new int[questions.Count];
+            // Build a vector of randomly selected questions, constantly checking that the
+            // currently selected question was not previously selected.
             while (random_questions.Count != number_questions)
             {
                 int idx = rnd.Next(0, questions.Count);
@@ -132,6 +147,7 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
                 }
             }
 
+            // If no questions were found in the database, do not open the next window
             if (number_questions != 0)
             {
                 game_window.change_panel(random_questions.Count);
