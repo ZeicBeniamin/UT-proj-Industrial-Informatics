@@ -14,8 +14,6 @@ namespace Industrial_Informatics_Project.Windows
 {
     public partial class SignUp_Window : Form
     {
-        string usermane;
-        string email;
 
         // Application object 
         Application_Controller application_controller;
@@ -37,88 +35,23 @@ namespace Industrial_Informatics_Project.Windows
         /// <param name="e"></param>
         private void create_button_Click(object sender, EventArgs e)
         {
-            if(check_information())
+            if(check_inforamtion())
             {
-                // TO DO: INSERT INFORMATION INTO THE DATABASE
-                using (var db = new GamesDBEntities1())
+                if(DataModel.DataHandler.existsUser(email_textbox.Text))
                 {
-                    Insert(db);
+                    label_error.Text = "Email already used by another account!";
                 }
-
-                // If data insertion succesfull
-                clear_information();
-                label_error.ForeColor = Color.Green;
-                label_error.Text = "Account created succesfully!";
-            }
-        }
-
-        bool Insert(GamesDBEntities1 db)
-        {
-            bool result = false;
-            var user = new User();
-
-            user.Username = username_textbox.Text;
-            user.Password = password_textbox.Text;
-            user.Email = email_textbox.Text;
-
-            try
-            {
-                db.Users.Add(user);
-                db.SaveChanges();
-                result = true;
-            }
-            catch (Exception ex)
-            {
-                result = false;
-            }
-            
-            return result;
-        }
-
-        bool Update(GamesDBEntities1 db)
-        {
-            bool result = false;
-
-            var user = db.Users.SingleOrDefault(c => c.Username == "username");
-
-            if (user != null)
-            {
-                try
+                else
                 {
-                    user.Username = "  ";
-                    db.SaveChanges();
-                    result = true;
-                }
-                catch (Exception ex)
-                {
-                    result = false;
+                    if (DataModel.DataHandler.insertUser(username_textbox.Text, email_textbox.Text, password_textbox.Text))
+                    {
+                        // If data insertion succesfull
+                        clear_information();
+                        label_error.ForeColor = Color.Green;
+                        label_error.Text = "Account created succesfully!";
+                    }
                 }
             }
-
-            return result;
-        }
-
-        bool Delete(GamesDBEntities1 db, string username)
-        {
-            bool result = false;
-
-            var user = db.Users.SingleOrDefault(c => c.Username == username);
-
-            if (user != null)
-            {
-                try
-                {
-                    db.Users.Remove(user);
-                    db.SaveChanges();
-                    result = true;
-                }
-                catch (Exception ex)
-                {
-                    result = false;
-                }
-            }
-
-            return result;
         }
 
         /// <summary>
@@ -146,7 +79,7 @@ namespace Industrial_Informatics_Project.Windows
         /// </summary>
         /// <returns>TRUE:  information is valid
         ///          FALSE: information is not valid</returns>
-        private bool check_information() 
+        private bool check_inforamtion() 
         {
             label_error.ForeColor = Color.Red;
 

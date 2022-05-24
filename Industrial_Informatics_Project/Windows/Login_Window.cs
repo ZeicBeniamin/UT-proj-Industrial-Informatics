@@ -47,20 +47,16 @@ namespace Industrial_Informatics_Project.Windows
         {
             if (check_information())
             {
+                User user = new User();
+                user.id = DataModel.DataHandler.getUserId(userman_textbox.Text, password_textbox.Text);
+                user.username = userman_textbox.Text;
+
+                application_controller.set_user(user);
+
                 if (!check_admin())
-                {
-                    // TODO: check database for the user
-
-                    // Just for testing
-                    User user = new User();
-                    user.username = "darius";
-
-                    application_controller.set_user(user);
-
                     application_controller.open_window("Main");
-                }
-                else
-                    application_controller.open_window("Admin");
+                else 
+                    application_controller.open_window("Admin");     
             }
         }
 
@@ -69,9 +65,10 @@ namespace Industrial_Informatics_Project.Windows
         /// </summary>
         private bool check_admin()
         {
-            if (userman_textbox.Text == "admin" && password_textbox.Text == "admin")
+            if (DataModel.DataHandler.isAdmin(userman_textbox.Text, password_textbox.Text))
                 return true;
-            return false;
+            else
+                return false;
         }
 
         /// <summary>
@@ -103,7 +100,10 @@ namespace Industrial_Informatics_Project.Windows
                 return false;
             }
 
-            return true;
+            if (DataModel.DataHandler.isUser(userman_textbox.Text, password_textbox.Text))
+                return true;
+            else
+                return false;
         }
     }
 }
