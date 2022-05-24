@@ -112,6 +112,14 @@ namespace Industrial_Informatics_Project
                 register_button.Visible = true;
                 login_button.Visible = true;
 
+                chimpanzee_button.Enabled = false;
+                stroop_button.Enabled = false;
+                quiz_button.Enabled = false;
+
+                button_chimp_stats.Enabled = false;
+                button_quiz_stas.Enabled = false;
+                button_stroop_stats.Enabled = false;
+
                 logout_button.Visible = false;
             }
         }
@@ -121,7 +129,7 @@ namespace Industrial_Informatics_Project
         /// </summary>
         private void update_for_user()
         {
-            usermane_label.Text = application_controller.get_user().username;
+            usermane_label.Text = "Welcome, " + application_controller.get_user().username;
         }
 
         /// <summary>
@@ -144,6 +152,21 @@ namespace Industrial_Informatics_Project
         private void temp_button_Click(object sender, EventArgs e)
         {
             application_controller.open_window("Questions");
+        }
+
+        private void button_chimp_stats_Click(object sender, EventArgs e)
+        {
+            application_controller.open_window("ChimpanzeeStatsWindow");
+        }
+
+        private void button_quiz_stas_Click(object sender, EventArgs e)
+        {
+            application_controller.open_window("QuizStatsWindow");
+        }
+
+        private void button_stroop_stats_Click(object sender, EventArgs e)
+        {
+            application_controller.open_window("StroopStatsWindow");
         }
     }
 }

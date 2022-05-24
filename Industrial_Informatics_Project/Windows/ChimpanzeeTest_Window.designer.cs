@@ -414,7 +414,7 @@ namespace Industrial_Informatics_Project.Windows
             this.Controls.Add(this.button_1);
             this.Controls.Add(this.button_0);
             this.Name = "ChimpanzeeTest_Window";
-            this.Text = "ChimpanzeeTest_Window";
+            this.Text = "ChimpanzeeTest Window";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChimpanzeeTest_Window_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

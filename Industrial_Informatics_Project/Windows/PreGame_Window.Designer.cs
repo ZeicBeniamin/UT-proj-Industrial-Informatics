@@ -29,11 +29,13 @@ namespace Industrial_Informatics_Project.Windows
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreGame_Window));
             this.start_button = new System.Windows.Forms.Button();
             this.easy_button = new System.Windows.Forms.Button();
             this.medium_button = new System.Windows.Forms.Button();
             this.hard_button = new System.Windows.Forms.Button();
             this.difficulty_label = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // start_button
@@ -85,18 +87,29 @@ namespace Industrial_Informatics_Project.Windows
             this.difficulty_label.TabIndex = 4;
             this.difficulty_label.Text = "Selected difficulty: Easy";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(28, 28);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(566, 311);
+            this.richTextBox1.TabIndex = 5;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
             // PreGame_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 476);
+            this.ClientSize = new System.Drawing.Size(632, 473);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.difficulty_label);
             this.Controls.Add(this.hard_button);
             this.Controls.Add(this.medium_button);
             this.Controls.Add(this.easy_button);
             this.Controls.Add(this.start_button);
             this.Name = "PreGame_Window";
-            this.Text = "PreGame_Window";
+            this.Text = "PreGame Window";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PreGame_Window_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -110,5 +123,6 @@ namespace Industrial_Informatics_Project.Windows
         private System.Windows.Forms.Button medium_button;
         private System.Windows.Forms.Button hard_button;
         private System.Windows.Forms.Label difficulty_label;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

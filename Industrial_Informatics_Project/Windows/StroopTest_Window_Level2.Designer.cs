@@ -51,17 +51,18 @@
             // 
             this.coloredWord1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coloredWord1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.coloredWord1.Location = new System.Drawing.Point(160, 95);
+            this.coloredWord1.Location = new System.Drawing.Point(142, 76);
             this.coloredWord1.Name = "coloredWord1";
-            this.coloredWord1.Size = new System.Drawing.Size(140, 40);
+            this.coloredWord1.Size = new System.Drawing.Size(124, 32);
             this.coloredWord1.TabIndex = 0;
             this.coloredWord1.Text = "BLACK";
             // 
             // blackButton
             // 
-            this.blackButton.Location = new System.Drawing.Point(100, 371);
+            this.blackButton.Location = new System.Drawing.Point(89, 297);
+            this.blackButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.blackButton.Name = "blackButton";
-            this.blackButton.Size = new System.Drawing.Size(180, 80);
+            this.blackButton.Size = new System.Drawing.Size(160, 64);
             this.blackButton.TabIndex = 2;
             this.blackButton.Text = "BLACK";
             this.blackButton.UseVisualStyleBackColor = true;
@@ -69,9 +70,10 @@
             // 
             // yellowButton
             // 
-            this.yellowButton.Location = new System.Drawing.Point(287, 371);
+            this.yellowButton.Location = new System.Drawing.Point(255, 297);
+            this.yellowButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.yellowButton.Name = "yellowButton";
-            this.yellowButton.Size = new System.Drawing.Size(180, 80);
+            this.yellowButton.Size = new System.Drawing.Size(160, 64);
             this.yellowButton.TabIndex = 3;
             this.yellowButton.Text = "YELLOW";
             this.yellowButton.UseVisualStyleBackColor = true;
@@ -79,9 +81,10 @@
             // 
             // greenButton
             // 
-            this.greenButton.Location = new System.Drawing.Point(473, 371);
+            this.greenButton.Location = new System.Drawing.Point(420, 297);
+            this.greenButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.greenButton.Name = "greenButton";
-            this.greenButton.Size = new System.Drawing.Size(180, 80);
+            this.greenButton.Size = new System.Drawing.Size(160, 64);
             this.greenButton.TabIndex = 4;
             this.greenButton.Text = "GREEN";
             this.greenButton.UseVisualStyleBackColor = true;
@@ -89,9 +92,10 @@
             // 
             // redButton
             // 
-            this.redButton.Location = new System.Drawing.Point(100, 457);
+            this.redButton.Location = new System.Drawing.Point(89, 366);
+            this.redButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.redButton.Name = "redButton";
-            this.redButton.Size = new System.Drawing.Size(180, 80);
+            this.redButton.Size = new System.Drawing.Size(160, 64);
             this.redButton.TabIndex = 5;
             this.redButton.Text = "RED";
             this.redButton.UseVisualStyleBackColor = true;
@@ -99,9 +103,10 @@
             // 
             // blueButton
             // 
-            this.blueButton.Location = new System.Drawing.Point(286, 457);
+            this.blueButton.Location = new System.Drawing.Point(254, 366);
+            this.blueButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.blueButton.Name = "blueButton";
-            this.blueButton.Size = new System.Drawing.Size(180, 80);
+            this.blueButton.Size = new System.Drawing.Size(160, 64);
             this.blueButton.TabIndex = 6;
             this.blueButton.Text = "BLUE";
             this.blueButton.UseVisualStyleBackColor = true;
@@ -109,9 +114,10 @@
             // 
             // pinkButton
             // 
-            this.pinkButton.Location = new System.Drawing.Point(473, 457);
+            this.pinkButton.Location = new System.Drawing.Point(420, 366);
+            this.pinkButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pinkButton.Name = "pinkButton";
-            this.pinkButton.Size = new System.Drawing.Size(180, 80);
+            this.pinkButton.Size = new System.Drawing.Size(160, 64);
             this.pinkButton.TabIndex = 7;
             this.pinkButton.Text = "PINK";
             this.pinkButton.UseVisualStyleBackColor = true;
@@ -121,9 +127,10 @@
             // 
             this.timeBar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.timeBar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.timeBar.Location = new System.Drawing.Point(55, 28);
+            this.timeBar.Location = new System.Drawing.Point(49, 22);
+            this.timeBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.timeBar.Name = "timeBar";
-            this.timeBar.Size = new System.Drawing.Size(707, 23);
+            this.timeBar.Size = new System.Drawing.Size(628, 18);
             this.timeBar.TabIndex = 8;
             // 
             // timerMoveLabel
@@ -134,9 +141,9 @@
             // 
             this.coloredWord5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coloredWord5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.coloredWord5.Location = new System.Drawing.Point(662, 95);
+            this.coloredWord5.Location = new System.Drawing.Point(588, 76);
             this.coloredWord5.Name = "coloredWord5";
-            this.coloredWord5.Size = new System.Drawing.Size(135, 40);
+            this.coloredWord5.Size = new System.Drawing.Size(120, 32);
             this.coloredWord5.TabIndex = 9;
             this.coloredWord5.Text = "BLACK";
             // 
@@ -145,9 +152,9 @@
             this.labelColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelColor.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelColor.Location = new System.Drawing.Point(773, 400);
+            this.labelColor.Location = new System.Drawing.Point(687, 320);
             this.labelColor.Name = "labelColor";
-            this.labelColor.Size = new System.Drawing.Size(206, 62);
+            this.labelColor.Size = new System.Drawing.Size(183, 50);
             this.labelColor.TabIndex = 10;
             this.labelColor.Text = "Black";
             this.labelColor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -156,9 +163,9 @@
             // 
             this.coloredWord6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coloredWord6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.coloredWord6.Location = new System.Drawing.Point(796, 172);
+            this.coloredWord6.Location = new System.Drawing.Point(708, 138);
             this.coloredWord6.Name = "coloredWord6";
-            this.coloredWord6.Size = new System.Drawing.Size(138, 40);
+            this.coloredWord6.Size = new System.Drawing.Size(123, 32);
             this.coloredWord6.TabIndex = 11;
             this.coloredWord6.Text = "BLACK";
             // 
@@ -166,9 +173,9 @@
             // 
             this.coloredWord4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coloredWord4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.coloredWord4.Location = new System.Drawing.Point(555, 172);
+            this.coloredWord4.Location = new System.Drawing.Point(493, 138);
             this.coloredWord4.Name = "coloredWord4";
-            this.coloredWord4.Size = new System.Drawing.Size(138, 40);
+            this.coloredWord4.Size = new System.Drawing.Size(123, 32);
             this.coloredWord4.TabIndex = 12;
             this.coloredWord4.Text = "BLACK";
             // 
@@ -176,9 +183,9 @@
             // 
             this.coloredWord2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coloredWord2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.coloredWord2.Location = new System.Drawing.Point(290, 172);
+            this.coloredWord2.Location = new System.Drawing.Point(258, 138);
             this.coloredWord2.Name = "coloredWord2";
-            this.coloredWord2.Size = new System.Drawing.Size(138, 40);
+            this.coloredWord2.Size = new System.Drawing.Size(123, 32);
             this.coloredWord2.TabIndex = 13;
             this.coloredWord2.Text = "BLACK";
             // 
@@ -186,18 +193,18 @@
             // 
             this.coloredWord3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coloredWord3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.coloredWord3.Location = new System.Drawing.Point(415, 95);
+            this.coloredWord3.Location = new System.Drawing.Point(369, 76);
             this.coloredWord3.Name = "coloredWord3";
-            this.coloredWord3.Size = new System.Drawing.Size(138, 40);
+            this.coloredWord3.Size = new System.Drawing.Size(123, 32);
             this.coloredWord3.TabIndex = 14;
             this.coloredWord3.Text = "BLACK";
             // 
             // StroopTest_Window_Level2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1072, 587);
+            this.ClientSize = new System.Drawing.Size(953, 470);
             this.Controls.Add(this.coloredWord3);
             this.Controls.Add(this.coloredWord2);
             this.Controls.Add(this.coloredWord4);
@@ -212,8 +219,9 @@
             this.Controls.Add(this.yellowButton);
             this.Controls.Add(this.blackButton);
             this.Controls.Add(this.coloredWord1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StroopTest_Window_Level2";
-            this.Text = "StroopTest_Window";
+            this.Text = "StroopTest Window";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StroopTest_Window_FormClosing);
             this.ResumeLayout(false);
 

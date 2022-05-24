@@ -14,12 +14,19 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
         private QuizStats quiz_stats;
 
         // Questions from the database
-        private Question[] questions;
+        private List<Question> questions;
  
         // Timer of the quiz
         private int time;
 
-        // Number of questions 
+        // Required number of questions
+        private int required_number_questions;
+
+        // Actual number of questions
+        // If there are not enough questions from a given category, 
+        // required_number_questions will be less than number_questions
+        // Good for errors that might appear when inserting new 
+        // categories.
         private int number_questions;
 
         // Game window of the game
@@ -47,14 +54,15 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
             check_difficulty(difficulty);
 
             quiz_stats = new QuizStats();
+            quiz_stats.user_id = application_controller.get_user().id;
 
-            questions = new Question[5];
+            //questions = new Question[5];
 
-            questions[0] = new Question(0, 0, "text  mai lung la intrebare sa vad daca face wrap labelu la text daca e mai lunt aaaaaaaaaaaaaaaaaaaaaaaaaa", "d;g;h;i", "d", 1);
-            questions[1] = new Question(1, 0, "nu", "d;g;h;i", "g", 1);
-            questions[2] = new Question(2, 0, "poate", "d;g;h;i", "h", 1);
-            questions[3] = new Question(3, 0, "sepoate", "d;g;h;i", "i", 1);
-            questions[4] = new Question(4, 0, "sigur", "d;g;h;f", "f", 1);
+           // questions[0] = new Question(0, 0, "text  mai lung la intrebare sa vad daca face wrap labelu la text daca e mai lunt aaaaaaaaaaaaaaaaaaaaaaaaaa", "d;g;h;i", "d", 1);
+            //questions[1] = new Question(1, 0, "nu", "d;g;h;i", "g", 1);
+            //questions[2] = new Question(2, 0, "poate", "d;g;h;i", "h", 1);
+            //questions[3] = new Question(3, 0, "sepoate", "d;g;h;i", "i", 1);
+            //questions[4] = new Question(4, 0, "sigur", "d;g;h;f", "f", 1);
         }
 
         /// <summary>
@@ -67,23 +75,23 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
             {
                 case 0:
                     {
-                        number_questions = 10;
-                        time = 15;
+                        required_number_questions = 10;
+                        time = 10;
                     }; break;
                 case 1:
                     {
-                        number_questions = 15;
-                        time = 15;
+                        required_number_questions = 10;
+                        time = 10;
                     }; break;
                 case 2:
                     {
-                        number_questions  = 20;
-                        time = 18;
+                        required_number_questions = 10;
+                        time = 10;
                     }; break;
                 default:
                     {
-                        number_questions = 10;
-                        time = 15;
+                        required_number_questions = 10;
+                        time = 10;
                     }; break;
             }
         }
@@ -94,8 +102,8 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
         private void get_categories()
         {
             // TODO: ACCESS THE DATABASE FOR THE CATEGORIES
-            string[] category = { "space", "math", "geography", "language", "computers", "systems", "programming", "programming", "programming", "programming", "programming", "programming", "programming", "programming", "darius" };
-            game_window.update_category(category);
+            List<String> categories = DataModel.DataHandler.getCategories();
+            game_window.update_category(categories);
         }
 
         /// <summary>
@@ -104,8 +112,50 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
         /// <param name="category">Category selected</param>
         public void get_questions(string category)
         {
-            // TODO: GET QUESTIONS FROM DATABASE
-            game_window.chage_panel(questions.Length);
+            // Initialize a random generator for random question order
+            var rnd = new Random(DateTime.Now.Millisecond);
+
+            // Get questions from db, having a certain difficulty
+            questions = DataModel.DataHandler.get_questions(category, application_controller.get_game_to_play().get_difficulty());
+            
+            //  Initialize empty list of questions in random order
+            List<Scripts.Games.QuizScript.Question> random_questions = new List<Scripts.Games.QuizScript.Question>();
+
+            // Set the number of questions to match the required number of questions
+            // If we do not have enough questions in the DB, the number will be lowered
+            number_questions = required_number_questions;
+
+            // Check if we have enough questions in the db. Otherwise, lower the number
+            // of questions.
+            if (questions.Count < number_questions)
+            { 
+                number_questions = questions.Count;
+                Console.WriteLine("We only have " + number_questions + " questions.");
+            }
+
+            // Maintain a marking of the questions already selected - prevents selecting a question two times
+            int[] already_selected = new int[questions.Count];
+            // Build a vector of randomly selected questions, constantly checking that the
+            // currently selected question was not previously selected.
+            while (random_questions.Count != number_questions)
+            {
+                int idx = rnd.Next(0, questions.Count);
+                if (already_selected[idx] == 0)
+                {
+                    already_selected[idx] = 1;
+                    random_questions.Add(questions[idx]);
+                }
+            }
+
+            // If no questions were found in the database, do not open the next window
+            if (number_questions != 0)
+            {
+                game_window.change_panel(random_questions.Count);
+            }
+            else
+            {
+                return;
+            }
         }
 
         /// <summary>
@@ -156,7 +206,7 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
                 quiz_stats.incorrect_answers++;
             }
 
-            if(quiz_stats.correct_answers + quiz_stats.incorrect_answers == questions.Length)
+            if(quiz_stats.correct_answers + quiz_stats.incorrect_answers == number_questions)
                 end_game();
         }
 
@@ -173,6 +223,8 @@ namespace Industrial_Informatics_Project.Scripts.Games.QuizScript
             quiz_stats.seconds = game_window.seconds;
 
             application_controller.set_game_stats(quiz_stats);
+
+            DataModel.DataHandler.insertQuizStats(quiz_stats);
 
             application_controller.open_window("PostGame");
         }

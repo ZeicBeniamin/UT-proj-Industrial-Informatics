@@ -51,15 +51,15 @@ namespace Industrial_Informatics_Project.Windows
         /// <summary>
         /// Create the buttons for the categories
         /// </summary>
-        /// <param name="category"></param>
-        public void update_category(string[] category)
+        /// <param name="categories"></param>
+        public void update_category(List<String> categories)
         {
-            for(int i=0;i<category.Length;i++)
+            for(int i=0;i<categories.Count;i++)
             {
                 Button button = new Button();
                 button.Height = 50;
                 button.Width = 100;
-                button.Text = category[i];
+                button.Text = categories[i];
                 button.Click += new EventHandler(category_button_click);
 
                 category_buttons_panel.Controls.Add(button);
@@ -88,7 +88,7 @@ namespace Industrial_Informatics_Project.Windows
         /// Change from the category selection to the actual quiz game 
         /// </summary>
         /// <param name="number_qusetion"></param>
-        public void chage_panel(int number_qusetion)
+        public void change_panel(int number_qusetion)
         {
             quiz_panel.Visible = true;
             category_select_panel.Visible = false;
@@ -236,6 +236,11 @@ namespace Industrial_Informatics_Project.Windows
                 timer_label.Text += "0" + seconds.ToString();
             else
                 timer_label.Text += seconds.ToString();
+        }
+
+        private void quiz_panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Welcome to the pregame window, here we will shortly explain how to play each of the games.
+
+When it comes to the Chimpanzee test is simple, click the active squares in the order they first appeard. 
+
+The Quiz is also simple, choose a cathegory you like and answer the 10 questions as fast as possible as correct as possible.
+
+Stroop test is a bit more complicated. You will have to click the button that spells the color of the text that is moving. Thats it.</value>
+  </data>
 </root>

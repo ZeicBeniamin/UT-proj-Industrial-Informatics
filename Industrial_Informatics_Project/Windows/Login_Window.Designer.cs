@@ -40,7 +40,7 @@ namespace Industrial_Informatics_Project.Windows
             // 
             // login_button
             // 
-            this.login_button.Location = new System.Drawing.Point(147, 355);
+            this.login_button.Location = new System.Drawing.Point(148, 222);
             this.login_button.Name = "login_button";
             this.login_button.Size = new System.Drawing.Size(112, 46);
             this.login_button.TabIndex = 0;
@@ -50,18 +50,18 @@ namespace Industrial_Informatics_Project.Windows
             // 
             // create_button
             // 
-            this.create_button.Location = new System.Drawing.Point(147, 407);
+            this.create_button.Location = new System.Drawing.Point(148, 289);
             this.create_button.Name = "create_button";
             this.create_button.Size = new System.Drawing.Size(112, 46);
             this.create_button.TabIndex = 1;
-            this.create_button.Text = "Cerate Account";
+            this.create_button.Text = "Sign up";
             this.create_button.UseVisualStyleBackColor = true;
             this.create_button.Click += new System.EventHandler(this.create_button_Click);
             // 
             // label_username
             // 
             this.label_username.AutoSize = true;
-            this.label_username.Location = new System.Drawing.Point(98, 96);
+            this.label_username.Location = new System.Drawing.Point(112, 46);
             this.label_username.Name = "label_username";
             this.label_username.Size = new System.Drawing.Size(77, 17);
             this.label_username.TabIndex = 2;
@@ -70,7 +70,7 @@ namespace Industrial_Informatics_Project.Windows
             // label_password
             // 
             this.label_password.AutoSize = true;
-            this.label_password.Location = new System.Drawing.Point(98, 191);
+            this.label_password.Location = new System.Drawing.Point(112, 141);
             this.label_password.Name = "label_password";
             this.label_password.Size = new System.Drawing.Size(73, 17);
             this.label_password.TabIndex = 3;
@@ -78,14 +78,14 @@ namespace Industrial_Informatics_Project.Windows
             // 
             // userman_textbox
             // 
-            this.userman_textbox.Location = new System.Drawing.Point(101, 116);
+            this.userman_textbox.Location = new System.Drawing.Point(115, 66);
             this.userman_textbox.Name = "userman_textbox";
             this.userman_textbox.Size = new System.Drawing.Size(181, 22);
             this.userman_textbox.TabIndex = 4;
             // 
             // password_textbox
             // 
-            this.password_textbox.Location = new System.Drawing.Point(101, 211);
+            this.password_textbox.Location = new System.Drawing.Point(115, 161);
             this.password_textbox.Name = "password_textbox";
             this.password_textbox.PasswordChar = '*';
             this.password_textbox.Size = new System.Drawing.Size(181, 22);
@@ -95,7 +95,7 @@ namespace Industrial_Informatics_Project.Windows
             // 
             this.label_error.AutoSize = true;
             this.label_error.ForeColor = System.Drawing.Color.Red;
-            this.label_error.Location = new System.Drawing.Point(98, 270);
+            this.label_error.Location = new System.Drawing.Point(100, 194);
             this.label_error.Name = "label_error";
             this.label_error.Size = new System.Drawing.Size(0, 17);
             this.label_error.TabIndex = 6;
@@ -104,7 +104,7 @@ namespace Industrial_Informatics_Project.Windows
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 483);
+            this.ClientSize = new System.Drawing.Size(420, 372);
             this.Controls.Add(this.label_error);
             this.Controls.Add(this.password_textbox);
             this.Controls.Add(this.userman_textbox);
@@ -113,7 +113,7 @@ namespace Industrial_Informatics_Project.Windows
             this.Controls.Add(this.create_button);
             this.Controls.Add(this.login_button);
             this.Name = "Login_Window";
-            this.Text = "Login_Window";
+            this.Text = "Login Window";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_Window_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

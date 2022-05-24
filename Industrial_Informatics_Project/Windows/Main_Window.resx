@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Arcadia, a place where you can test youre cognitive functions!
+
+Play you different games and see how you improve over time.
+
+Want to see if youre memory is better than the one of a chimpanzee? Try playing the "Chimpanzee Test" and find out.
+You think youre attention span is good, lets put that to the test with "Stroop test". 
+And if you think youre knowlege is above others we can find that out with our "Quiz Test"</value>
+  </data>
 </root>

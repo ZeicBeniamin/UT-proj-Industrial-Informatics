@@ -39,7 +39,18 @@ namespace Industrial_Informatics_Project.Windows
         /// <param name="e"></param>
         private void Admin_Window_FormClosing(object sender, FormClosingEventArgs e)
         {
+            /*application_controller.exit_application();*/
             application_controller.open_window("Main");
+        }
+
+        private void buttonAddCategory_Click(object sender, EventArgs e)
+        {
+            application_controller.open_window("Categories");
+        }
+
+        private void users_button_Click(object sender, EventArgs e)
+        {
+            application_controller.open_window("UsersOverview");
         }
     }
 }

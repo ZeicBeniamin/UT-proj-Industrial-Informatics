@@ -62,6 +62,7 @@ namespace Industrial_Informatics_Project.Scripts.Games.StroopTestScript
             this.application_controller = application_controller;
             game_window = new StroopTest_Window_Level2(this);
             game_stats = new StroopStats();
+            game_stats.user_id = application_controller.get_user().id;
         }
 
         #region Getters
@@ -216,6 +217,9 @@ namespace Industrial_Informatics_Project.Scripts.Games.StroopTestScript
             game_window.Dispose();
 
             application_controller.set_game_stats(game_stats);
+            
+            game_stats.difficulty = 2;
+            DataModel.DataHandler.insertStroopStats(game_stats);
 
             application_controller.open_window("PostGame");
         }

@@ -61,6 +61,9 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
 
             this.application_controller = application_controller;
 
+            game_window.end_visibility(false);
+            game_window.next_visibility(false);
+
             init_game_stats();
         }
 
@@ -214,6 +217,8 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
 
             application_controller.set_game_stats(game_stats);
 
+            DataModel.DataHandler.insertChimpanzeeStats(game_stats);
+
             application_controller.open_window("PostGame");
         }
 
@@ -249,6 +254,7 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
             game_stats.avg_solve_time = 0;
             game_stats.game_time = 0;
             game_stats.date = DateTime.Now;
+            game_stats.user_id = application_controller.get_user().id;
         }
     }
 }
