@@ -75,6 +75,9 @@
     <Compile Include="DataModel\Chimpanzee_Stats.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="II_ProjectDataSet.cs">
+      <DependentUpon>II_ProjectDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="II_ProjectDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

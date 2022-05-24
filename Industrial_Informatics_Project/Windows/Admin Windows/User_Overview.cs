@@ -14,6 +14,7 @@ namespace Industrial_Informatics_Project.Windows.Admin_Windows
     public partial class User_Overview : Form
     {
         Application_Controller application_controller = null;
+
         public User_Overview(Application_Controller application_controller )
         {
             InitializeComponent();
