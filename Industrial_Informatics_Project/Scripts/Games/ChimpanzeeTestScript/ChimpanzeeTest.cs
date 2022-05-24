@@ -61,6 +61,9 @@ namespace Industrial_Informatics_Project.Scripts.Games.ChimpanzeeTestScript
 
             this.application_controller = application_controller;
 
+            game_window.end_visibility(false);
+            game_window.next_visibility(false);
+
             init_game_stats();
         }
 
