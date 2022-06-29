@@ -8,6 +8,7 @@ namespace Industrial_Informatics_Project.DataModel
 {
     class DataHandler
     {
+<<<<<<< HEAD
         public static bool insertUser(string username, string email, string password)
         {
             using (ProjectEntities entities = new ProjectEntities())
@@ -405,6 +406,37 @@ namespace Industrial_Informatics_Project.DataModel
 
                 return stats;
             }
+=======
+        static void insertUniversity(int id, string name, string city, int code)
+        {
+            int startIndex = 0;
+            II_ProjectEntities entities = new II_ProjectEntities();
+            IList<User> users = (from user in entities.Universities
+                                                  select user)
+                .OrderBy(university => university.Id)
+                .Skip(startIndex)
+                .ToList();
+                textBox_universities.Text = "";
+                foreach (University uni in users)
+                {
+                    string university = uni.Id + " " + uni.NameUniv + " " + uni.City + " " + uni.Code + Environment.NewLine;
+                    textBox_universities.Text += university;
+                }
+            
+
+
+
+        }
+
+        static void deleteUniversity(int code)
+        {
+           
+        }
+
+        static void updateUniversity(int id, string name, string city, int code)
+        {
+           
+>>>>>>> b301c430548f1d364edfc2f62d1283260b43c486
         }
     }
 }

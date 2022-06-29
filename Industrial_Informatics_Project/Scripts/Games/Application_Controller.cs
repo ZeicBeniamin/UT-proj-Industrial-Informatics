@@ -177,6 +177,15 @@ namespace Industrial_Informatics_Project.Scripts.Games
                     {
                         exit_app = false;
                         current_form.Dispose();
+//<<<<<<< HEAD
+                        int difficulty = 2;
+                        if(difficulty == 0)
+                        current_form = new StroopTest_Level0(this).get_game_window();
+                        else if(difficulty == 1)
+                        current_form = new StroopTest_Level1(this).get_game_window();
+                        else if(difficulty == 2)
+                        current_form = new StroopTest_Level2(this).get_game_window();
+//=======
 
                         if(game_to_play.get_difficulty() == 0)
                             current_form = new StroopTest_Level0(this).get_game_window();
@@ -186,6 +195,7 @@ namespace Industrial_Informatics_Project.Scripts.Games
                             current_form = new StroopTest_Level2(this).get_game_window();
                         else
                             current_form = new StroopTest_Level0(this).get_game_window();
+//>>>>>>> main
 
                         current_form.Show();
                         exit_app = true;

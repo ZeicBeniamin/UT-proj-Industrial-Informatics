@@ -14,10 +14,16 @@ namespace Industrial_Informatics_Project.DataModel
     
     public partial class User
     {
+<<<<<<< HEAD
         public int user_id { get; set; }
         public string user_name { get; set; }
         public string password { get; set; }
         public string email { get; set; }
         public Nullable<int> isAdmin { get; set; }
+=======
+        public string user_name { get; set; }
+        public int user_id { get; set; }
+        public string password { get; set; }
+>>>>>>> b301c430548f1d364edfc2f62d1283260b43c486
     }
 }
